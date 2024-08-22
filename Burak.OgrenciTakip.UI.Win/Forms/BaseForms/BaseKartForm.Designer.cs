@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip23 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem23 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip24 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip25 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem25 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -87,7 +87,7 @@
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl1.ShowQatLocationSelector = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(830, 109);
+            this.ribbonControl1.Size = new System.Drawing.Size(684, 109);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -100,12 +100,12 @@
             this.btnYeni.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
             this.btnYeni.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert));
             this.btnYeni.Name = "btnYeni";
-            toolTipTitleItem1.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem1.Text = "(Ctrl+Insert)";
-            toolTipItem1.Text = "Yeni Kart";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnYeni.SuperTip = superToolTip1;
+            toolTipTitleItem21.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem21.Text = "(Ctrl+Insert)";
+            toolTipItem21.Text = "Yeni Kart";
+            superToolTip21.Items.Add(toolTipTitleItem21);
+            superToolTip21.Items.Add(toolTipItem21);
+            this.btnYeni.SuperTip = superToolTip21;
             // 
             // btnKaydet
             // 
@@ -115,12 +115,12 @@
             this.btnKaydet.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.save_32x32;
             this.btnKaydet.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnKaydet.Name = "btnKaydet";
-            toolTipTitleItem2.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem2.Text = "(F2)";
-            toolTipItem2.Text = "Kaydet";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnKaydet.SuperTip = superToolTip2;
+            toolTipTitleItem22.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem22.Text = "(F2)";
+            toolTipItem22.Text = "Kaydet";
+            superToolTip22.Items.Add(toolTipTitleItem22);
+            superToolTip22.Items.Add(toolTipItem22);
+            this.btnKaydet.SuperTip = superToolTip22;
             // 
             // btnGerial
             // 
@@ -130,12 +130,12 @@
             this.btnGerial.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.reset_32x32;
             this.btnGerial.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
             this.btnGerial.Name = "btnGerial";
-            toolTipTitleItem3.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem3.Text = "(Ctrl+Z)";
-            toolTipItem3.Text = "Geri Al";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.btnGerial.SuperTip = superToolTip3;
+            toolTipTitleItem23.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem23.Text = "(Ctrl+Z)";
+            toolTipItem23.Text = "Geri Al";
+            superToolTip23.Items.Add(toolTipTitleItem23);
+            superToolTip23.Items.Add(toolTipItem23);
+            this.btnGerial.SuperTip = superToolTip23;
             // 
             // btnSil
             // 
@@ -145,12 +145,12 @@
             this.btnSil.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.deletelist_32x32;
             this.btnSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete));
             this.btnSil.Name = "btnSil";
-            toolTipTitleItem4.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem4.Text = "(Ctrl+Delete)";
-            toolTipItem4.Text = "Sil";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.btnSil.SuperTip = superToolTip4;
+            toolTipTitleItem24.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem24.Text = "(Ctrl+Delete)";
+            toolTipItem24.Text = "Sil";
+            superToolTip24.Items.Add(toolTipTitleItem24);
+            superToolTip24.Items.Add(toolTipItem24);
+            this.btnSil.SuperTip = superToolTip24;
             // 
             // btnCikis
             // 
@@ -160,12 +160,12 @@
             this.btnCikis.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.close_32x32;
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.ShortcutKeyDisplayString = "Esc";
-            toolTipTitleItem5.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem5.Text = "(Esc)";
-            toolTipItem5.Text = "Çıkış";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btnCikis.SuperTip = superToolTip5;
+            toolTipTitleItem25.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem25.Text = "(Esc)";
+            toolTipItem25.Text = "Çıkış";
+            superToolTip25.Items.Add(toolTipTitleItem25);
+            superToolTip25.Items.Add(toolTipItem25);
+            this.btnCikis.SuperTip = superToolTip25;
             // 
             // statusBarAciklama
             // 
@@ -209,10 +209,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarAciklama);
             this.ribbonStatusBar1.ItemLinks.Add(this.statusaBarKisaYol);
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarKisaYolAciklama);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 474);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 383);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(830, 24);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(684, 24);
             // 
             // ribbonPage2
             // 
@@ -223,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 498);
+            this.ClientSize = new System.Drawing.Size(684, 407);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.MinimizeBox = false;
