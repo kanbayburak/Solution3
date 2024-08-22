@@ -18,7 +18,7 @@ namespace Burak.OgrenciTakip.UI.Win.UserControls.Controls
             //2. Özelleştirme= buttonEdit ini focuslandığı zaman arka plan renginin değişmesini istiyoruz.
             Properties.AppearanceFocused.BackColor = Color.LightCyan;
         }
-
+        
         //3. özelleştirme = enter a basıldığında bir sonraki index sırasına göre controle focuslanması lazım, bu default olarak false gelir bunu true ya çekeceğiz, bu property olduğu için override yapılıyoruz.
         public override bool EnterMoveNextControl { get; set; } = true;
 
