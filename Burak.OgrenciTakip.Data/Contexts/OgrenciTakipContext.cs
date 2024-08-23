@@ -1,0 +1,36 @@
+using Burak.OgrenciTakip.Data.Contexts.OgrenciTakipMigration;
+using Burak.OgrenciTakip.Model.Entities;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+
+namespace Burak.OgrenciTakip.Data.Contexts
+{
+    //OgrenciTakipContext bir nevi bizim database imizdir. yani içerisine entiylerimizi ekleyeceðiz ve connection bilgilerimizide içerisinde barýndýrýyor 
+    public class OgrenciTakipContext : BaseDbContext<OgrenciTakipContext, Configuration>// TConext = OgrenciTakipContext ve TConfiguration =   Configuration   a karþýlýk geliyor.
+    {
+
+        public OgrenciTakipContext()
+        {
+            Configuration.LazyLoadingEnabled = false;
+        }
+
+        public OgrenciTakipContext(string connectionString) : base(connectionString)
+        {
+            Configuration.LazyLoadingEnabled = false;  //Mesela Okul ile ilgili select iþlemi yapýldýðýnda okula baðlý enetitylerini de çekiyor ama biz onlar hakkýndaki bilgileri istemediðimz halde getirmemesi için engellemiþ oluruz 
+        }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); // entitylerdeki mesela Okul u çoðul yapýyor bunun önüne geçmek için 
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); // mesela Entity deki Ýl silindiði vakit o ile baðlý ilçeleri de sil kýsmýný devre dýþý býrakýyoruz
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>(); 
+        }
+
+        //oluþturduðumuz her entity i burada tanýmlayacaðýz
+        //database lerdeki gibi table olarak farz edebiliriz 
+        public DbSet<Il> Il { get; set; }
+        public DbSet<Ilce> Ilce { get; set; }
+        public DbSet<Okul> Okul { get; set; }
+    }
+}
