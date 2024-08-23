@@ -8,19 +8,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 
-namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
+namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
 {
-    public partial class BaseKartForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class OkulKartlari : BaseKartlarForm
     {
-        public BaseKartForm()
+        public OkulKartlari()
         {
             InitializeComponent();
-        }
-
-        private void ribbonControl_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Burak.OgrenciTakip.UI.Win.UserControls.Controls
             grp.OptionsTableLayoutGroup.ColumnDefinitions[0].Width = 200;
             grp.OptionsTableLayoutGroup.ColumnDefinitions[1].SizeType = SizeType.Percent;
             grp.OptionsTableLayoutGroup.ColumnDefinitions[1].Width = 100;
-            grp.OptionsTableLayoutGroup.ColumnDefinitions.Add(new ColumnDefinition { SizeType = SizeType.Absolute, Width = 90 });
+            grp.OptionsTableLayoutGroup.ColumnDefinitions.Add(new ColumnDefinition { SizeType = SizeType.Absolute, Width = 99 });
 
 
             //row eklemesi 10 tane ekleyecek
