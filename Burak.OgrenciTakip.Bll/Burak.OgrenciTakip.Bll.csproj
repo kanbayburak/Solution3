@@ -54,11 +54,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseBll.cs" />
+    <Compile Include="Functions\Converts.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Interfaces\IBaseBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Burak.OgrenciTakip.Common\Burak.OgrenciTakip.Common.csproj">
+      <Project>{1F3D476D-322B-4F06-BD53-A5FB9649D065}</Project>
+      <Name>Burak.OgrenciTakip.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Burak.OgrenciTakip.Data\Burak.OgrenciTakip.Data.csproj">
       <Project>{b9f3e219-2968-489b-81c5-42d2f21a89e0}</Project>
       <Name>Burak.OgrenciTakip.Data</Name>

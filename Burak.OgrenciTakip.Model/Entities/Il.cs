@@ -17,6 +17,6 @@ namespace Burak.OgrenciTakip.Model.Entities
         //[StringLength(500)]
         public string Aciklama { get; set; }
 
-        //public ICollection<Ilce> Ilce {get; set; } //İle bağlı ilçeleri ICollection ile ulaşabiliriz 
+        //public ICollection<Ilce> Ilce { get; set; } //İle bağlı ilçeleri ICollection ile ulaşabiliriz 
     }
 }

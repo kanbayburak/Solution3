@@ -13,9 +13,9 @@ namespace Burak.OgrenciTakip.Common.Messages
             XtraMessageBox.Show(hataMesaji, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error); //error burada error iconu gelmesini sağlıyor 
         }
 
-        public static void UayriMesaji(string uayariMesaji)
+        public static void UyariMesaji(string uyariMesaji)
         {
-            XtraMessageBox.Show(uayariMesaji, "Uyar", MessageBoxButtons.OK, MessageBoxIcon.Information); //Information burada Information iconu gelmesini sağlıyor 
+            XtraMessageBox.Show(uyariMesaji, "Uyar", MessageBoxButtons.OK, MessageBoxIcon.Information); //Information burada Information iconu gelmesini sağlıyor 
         }
 
 
