@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Burak.OgrenciTakip.Model.Entities.Base.Interfaces;
 
 namespace Burak.OgrenciTakip.Model.Entities.Base
 {
-    public class BaseEntity
+    public class BaseEntity : IBaseEntity
     {
         //[Column(Order = 0), Key, DatabaseGenerated(DatabaseGeneratedOption.None)]  //datatable da creat ederken en üst sıraya koy buradakileri demek  // DatabaseGenerated(DatabaseGeneratedOption.None diyerek id sini otomatik artan olmasın biz vereceğiz demek 
         public long Id { get; set; }  //long olmasının nedeni burdaki Id yi biz oluşturup database e göndereceğiz .
