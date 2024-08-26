@@ -47,7 +47,7 @@ namespace Burak.OgrenciTakip.Common.Messages
         }
         public static void KartSecmemeUyariMesaji()
         {
-            UayriMesaji("Lütfen Bir Kart Seçiniz.");
+            UyariMesaji("Lütfen Bir Kart Seçiniz.");
         }
         public static void MukerrerKayitHataMesaji(string alanAdi)
         {
