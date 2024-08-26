@@ -1,5 +1,6 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
+using Burak.OgrenciTakip.UI.Win.Show.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Burak.OgrenciTakip.UI.Win.Show
 {
-    public class ShowEditForms<TForm> where TForm : BaseEditForm
+    public class ShowEditForms<TForm>: IBaseFormShow where TForm : BaseEditForm
     {
         public long ShowDialogEditForm(KartTuru kartTuru, long id) //,params object[] prm
         {

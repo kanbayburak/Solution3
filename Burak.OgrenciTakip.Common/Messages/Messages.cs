@@ -15,7 +15,7 @@ namespace Burak.OgrenciTakip.Common.Messages
 
         public static void UyariMesaji(string uyariMesaji)
         {
-            XtraMessageBox.Show(uyariMesaji, "Uyar", MessageBoxButtons.OK, MessageBoxIcon.Information); //Information burada Information iconu gelmesini sağlıyor 
+            XtraMessageBox.Show(uyariMesaji, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information); //Information burada Information iconu gelmesini sağlıyor 
         }
 
 

@@ -67,7 +67,7 @@
             this.btnSec = new DevExpress.XtraBars.BarButtonItem();
             this.btnDuzelt = new DevExpress.XtraBars.BarButtonItem();
             this.btnYenile = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFİltrele = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFiltrele = new DevExpress.XtraBars.BarButtonItem();
             this.btnKolonlar = new DevExpress.XtraBars.BarButtonItem();
             this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -122,7 +122,7 @@
             this.btnSec,
             this.btnDuzelt,
             this.btnYenile,
-            this.btnFİltrele,
+            this.btnFiltrele,
             this.btnKolonlar,
             this.btnYazdir,
             this.barButtonItem9,
@@ -249,20 +249,20 @@
             superToolTip5.Items.Add(toolTipItem5);
             this.btnYenile.SuperTip = superToolTip5;
             // 
-            // btnFİltrele
+            // btnFiltrele
             // 
-            this.btnFİltrele.Caption = "Filtrele";
-            this.btnFİltrele.Id = 6;
-            this.btnFİltrele.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.crossdatasourcefiltering__16x16;
-            this.btnFİltrele.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.crossdatasourcefiltering_32x32;
-            this.btnFİltrele.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
-            this.btnFİltrele.Name = "btnFİltrele";
+            this.btnFiltrele.Caption = "Filtrele";
+            this.btnFiltrele.Id = 6;
+            this.btnFiltrele.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.crossdatasourcefiltering__16x16;
+            this.btnFiltrele.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.crossdatasourcefiltering_32x32;
+            this.btnFiltrele.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
+            this.btnFiltrele.Name = "btnFiltrele";
             toolTipTitleItem6.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem6.Text = "(F8)";
             toolTipItem6.Text = "Tablo Verilerine Filtre Uygula";
             superToolTip6.Items.Add(toolTipTitleItem6);
             superToolTip6.Items.Add(toolTipItem6);
-            this.btnFİltrele.SuperTip = superToolTip6;
+            this.btnFiltrele.SuperTip = superToolTip6;
             // 
             // btnKolonlar
             // 
@@ -603,7 +603,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSec);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDuzelt);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYenile);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnFİltrele);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnFiltrele);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKolonlar);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnGonder);
@@ -644,7 +644,7 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // BaseKartlarForm
+            // BaseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -652,7 +652,7 @@
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.MinimizeBox = false;
-            this.Name = "BaseKartlarForm";
+            this.Name = "BaseListForm";
             this.Ribbon = this.ribbonControl;
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar1;
@@ -672,7 +672,7 @@
         private DevExpress.XtraBars.BarButtonItem btnSec;
         private DevExpress.XtraBars.BarButtonItem btnDuzelt;
         private DevExpress.XtraBars.BarButtonItem btnYenile;
-        private DevExpress.XtraBars.BarButtonItem btnFİltrele;
+        private DevExpress.XtraBars.BarButtonItem btnFiltrele;
         private DevExpress.XtraBars.BarButtonItem btnKolonlar;
         private DevExpress.XtraBars.BarButtonItem btnYazdir;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
