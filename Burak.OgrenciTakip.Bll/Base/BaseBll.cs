@@ -6,12 +6,9 @@ using Burak.OgrenciTakip.Common.Messages;
 using Burak.OgrenciTakip.Model.Entities.Base;
 using BurakOgrenciTakip.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.Bll.Base

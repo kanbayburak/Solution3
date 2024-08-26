@@ -46,7 +46,7 @@ namespace Burak.OgrenciTakip.Bll.General
                 IlceAdi = x.Ilce.IlceAdi,
                 Aciklama = x.Aciklama,
 
-            }).OrderBy(x => x.Kod).ToList();
+            }).OrderBy(x => x.Kod).ToList(); 
         }
 
        public bool Insert(BaseEntity entity)
