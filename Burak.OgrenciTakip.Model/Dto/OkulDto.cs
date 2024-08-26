@@ -1,14 +1,10 @@
 ﻿using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.Model.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Burak.OgrenciTakip.Model.Dto
 {
-    /*[NotMapped]*/ //OkulS i database edahil etmiyor bu yapmamızın nedeni IlAdi ve IlceAdi gözükmesini istemiyoruz database deki Okul ksımında 
+    [NotMapped] //OkulS i database edahil etmiyor bu yapmamızın nedeni IlAdi ve IlceAdi gözükmesini istemiyoruz database deki Okul ksımında 
 
     //OkulS sınıfı, bir okulun tüm detaylarını, il ve ilçe adlarını içeren bir veri transfer objesidir. Bu sınıf, okulun detay bilgilerini almak için kullanılır.
     public class OkulS : Okul  //OkulS deki S select anlamında birde OkulL var oda okul listesi demek 
