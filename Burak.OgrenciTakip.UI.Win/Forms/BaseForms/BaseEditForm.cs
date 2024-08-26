@@ -16,6 +16,5 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
         protected internal void Yukle() {}
 
-
     }
 }

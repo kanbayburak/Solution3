@@ -78,10 +78,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         {
             throw new NotImplementedException();
         }
-        private void Listele()
-        {
-            throw new NotImplementedException();
-        }
+        protected virtual void Listele() { }
 
         private void SelectEntity()
         {

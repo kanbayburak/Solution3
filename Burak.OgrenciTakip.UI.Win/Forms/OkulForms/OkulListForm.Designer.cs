@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -37,17 +37,31 @@
             this.colIlAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIlceAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
-            // longNavigator1
+            // ribbonControl
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 505);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1002, 24);
-            this.longNavigator1.TabIndex = 2;
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            // 
+            // 
+            // 
+            this.ribbonControl.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
+            this.ribbonControl.SearchEditItem.EditWidth = 150;
+            this.ribbonControl.SearchEditItem.Id = -5000;
+            this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl.Size = new System.Drawing.Size(1002, 109);
+            this.ribbonControl.Toolbar.ShowCustomizeItem = false;
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 505);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1002, 24);
+            this.longNavigator.TabIndex = 2;
             // 
             // grid
             // 
@@ -177,17 +191,19 @@
             this.colAciklama.VisibleIndex = 4;
             this.colAciklama.Width = 400;
             // 
-            // OkulKartlari
+            // OkulListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 553);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
-            this.Name = "OkulKartlari";
+            this.Controls.Add(this.longNavigator);
+            this.Name = "OkulListForm";
             this.Text = "Okul Kartları";
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.ribbonControl, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             this.ResumeLayout(false);
@@ -197,7 +213,7 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;

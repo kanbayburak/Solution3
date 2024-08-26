@@ -1,4 +1,6 @@
-﻿namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
+﻿using System;
+
+namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
     partial class BaseEditForm
     {
@@ -97,7 +99,6 @@
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
             // 
             // btnYeni
             // 
