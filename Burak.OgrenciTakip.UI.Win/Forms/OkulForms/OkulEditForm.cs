@@ -12,9 +12,9 @@ using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
 {
-    public partial class OkulKarti : BaseKartForm
+    public partial class OkulEditForm : BaseEditForm
     {
-        public OkulKarti()
+        public OkulEditForm()
         {
             InitializeComponent();
         }

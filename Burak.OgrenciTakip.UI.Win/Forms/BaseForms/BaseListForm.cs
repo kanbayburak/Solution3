@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
-    public partial class BaseKartlarForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public BaseKartlarForm()
+        public BaseListForm()
         {
             InitializeComponent();
         }
@@ -24,6 +24,11 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             }
                 
 
+        }
+
+        private void ShowEditForm(int v)
+        {
+            var result =
         }
 
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
@@ -70,9 +75,6 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
            
         }
 
-        private void ShowEditForm(int v)
-        {
-            
-        }
+
     }
 }

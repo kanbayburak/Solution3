@@ -1,6 +1,6 @@
 ﻿namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
-    partial class BaseKartlarForm
+    partial class BaseListForm
     {
         /// <summary>
         /// Required designer variable.
