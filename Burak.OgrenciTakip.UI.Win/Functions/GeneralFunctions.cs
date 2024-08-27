@@ -63,7 +63,13 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
 
         internal static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
         {
-            throw new NotImplementedException();
+            var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
+            var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
+
+            btnKaydet.Enabled = buttonEnabledDurumu;
+            btnGerial.Enabled = buttonEnabledDurumu;
+            btnYeni.Enabled = !buttonEnabledDurumu;
+            btnSil.Enabled = !buttonEnabledDurumu;
         }
 
         public static long IdOlustur(this IslemTuru islemTuru, BaseEntity selectedEntity)

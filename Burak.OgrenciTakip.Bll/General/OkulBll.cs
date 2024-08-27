@@ -1,4 +1,5 @@
 ﻿using Burak.OgrenciTakip.Bll.Base;
+using Burak.OgrenciTakip.Bll.Interfaces;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Data.Contexts;
 using Burak.OgrenciTakip.Model.Dto;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.Bll.General
 {
-    public class OkulBll: BaseBll<Okul, OgrenciTakipContext>
+    public class OkulBll: BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll
     {
         public OkulBll() { }
 
@@ -62,6 +63,16 @@ namespace Burak.OgrenciTakip.Bll.General
         public bool Delete(BaseEntity entity)
         {
             return BaseDelete(entity,KartTuru.Okul);
+        }
+
+        public bool UpDate(BaseEntity oldEntity, BaseEntity currentEntity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string YeniKodVer()
+        {
+            throw new NotImplementedException();
         }
     }
 }
