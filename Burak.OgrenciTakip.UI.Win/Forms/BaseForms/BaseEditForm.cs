@@ -8,6 +8,7 @@ using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Windows.Forms;
 
+
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
     public partial class BaseEditForm : RibbonForm
@@ -55,7 +56,6 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             if (e.Item == btnYeni)
             {
-
                 IslemTuru = IslemTuru.EntityInsert;
                 Yukle();
             }

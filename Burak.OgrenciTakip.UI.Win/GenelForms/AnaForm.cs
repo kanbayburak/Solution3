@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraBars;
+﻿using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
+using Burak.OgrenciTakip.UI.Win.Show;
+using DevExpress.XtraBars;
 
 namespace Burak.OgrenciTakip.UI.Win.GenelForms
 {
@@ -40,11 +32,7 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
         private void Butonlar_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (e.Item == btnOkulKartlari)
-            {
-                OkulListForm frm = new OkulListForm();
-                frm.MdiParent = ActiveForm;
-                frm.Show();
-            }
+                ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
 
         }
     }
