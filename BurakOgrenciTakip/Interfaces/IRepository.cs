@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Burak.OgrenciTakip.Common.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -33,6 +34,7 @@ namespace BurakOgrenciTakip.Interfaces
         //T türünü barından bir filter göndereceğiz, bu filtre ile sen git gerekli sorgulamaları yap, eğer sorgu sonucunda true dönüyorsa kayıt vardır demektir ve bunları geriye gönder.
         //yine TResult türünde olacak bu da sorgu anında belli olacak 
         IQueryable<TResult> Select<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector);
+        string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null);
 
     }
 }

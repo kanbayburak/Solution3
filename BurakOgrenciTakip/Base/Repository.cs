@@ -1,4 +1,6 @@
-﻿using BurakOgrenciTakip.Interfaces;
+﻿using Burak.OgrenciTakip.Common.Enums;
+using Burak.OgrenciTakip.Common.Functions;
+using BurakOgrenciTakip.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -107,47 +109,47 @@ namespace BurakOgrenciTakip.Base
             return filter == null ? _dbSet.Count() : _dbSet.Count(filter);
         }
 
-        //public string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null)
-        //{
-        //    string Kod()
-        //    {
-        //        string kod = null;
-        //        var kodDizi = kartTuru.ToName().Split(' ');
+        public string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null)
+        {
+            string Kod()
+            {
+                string kod = null;
+                var kodDizi = kartTuru.ToName().Split(' ');
 
-        //        for (int i = 0; i < kodDizi.Length - 1; i++)  //okul kartı,  sınıf grup kartı olabilir 
-        //        {
-        //            kod += kodDizi[i];
+                for (int i = 0; i < kodDizi.Length - 1; i++)  //okul kartı,  sınıf grup kartı olabilir 
+                {
+                    kod += kodDizi[i];
 
-        //            if (i + 1 < kodDizi.Length - 1)
-        //                kod += " ";
-        //        }
-        //        return kod += "-0001";
-        //    }
-        //    string YeniKodVer(string kod) //Okul-0001
-        //    {
-        //        var sayisalDegerler = "";
-        //        foreach (var karakter in kod)
-        //        {
-        //            if (char.IsDigit(karakter)) //0001
-        //            {
-        //                sayisalDegerler += karakter;
-        //            }
-        //            else
-        //                sayisalDegerler = "";
-        //        }
-        //        var artisSonrasiDeger = (int.Parse(sayisalDegerler) + 1).ToString(); //0049 //50 
-        //        var fark = kod.Length - artisSonrasiDeger.Length;
-        //        if (fark < 0)
-        //        {
-        //            fark = 0;
-        //        }
-        //        var yeniDeger = kod.Substring(0, fark);
-        //        yeniDeger += artisSonrasiDeger; //Okul-0050
-        //        return yeniDeger;
-        //    }
-        //    var maxKod = where == null ? _dbSet.Max(filter) : _dbSet.Where(where).Max(filter);
-        //    return maxKod == null ? Kod() : YeniKodVer(maxKod);
-        //}
+                    if (i + 1 < kodDizi.Length - 1)
+                        kod += " ";
+                }
+                return kod += "-0001";
+            }
+            string YeniKodVer(string kod) //Okul-0001
+            {
+                var sayisalDegerler = "";
+                foreach (var karakter in kod)
+                {
+                    if (char.IsDigit(karakter)) //0001
+                    {
+                        sayisalDegerler += karakter;
+                    }
+                    else
+                        sayisalDegerler = "";
+                }
+                var artisSonrasiDeger = (int.Parse(sayisalDegerler) + 1).ToString(); //0049 //50 
+                var fark = kod.Length - artisSonrasiDeger.Length;
+                if (fark < 0)
+                {
+                    fark = 0;
+                }
+                var yeniDeger = kod.Substring(0, fark);
+                yeniDeger += artisSonrasiDeger; //Okul-0050
+                return yeniDeger;
+            }
+            var maxKod = where == null ? _dbSet.Max(filter) : _dbSet.Where(where).Max(filter);
+            return maxKod == null ? Kod() : YeniKodVer(maxKod);
+        }
 
 
 

@@ -55,9 +55,9 @@ namespace Burak.OgrenciTakip.Bll.General
             return BaseInsert(entity, x => x.Kod == entity.Kod);
         }
 
-        public bool Update(BaseEntity oldEntity, BaseEntity currenEntity)
+        public bool UpDate(BaseEntity oldEntity, BaseEntity currentEntity)
         {
-            return BaseUpdate(oldEntity, currenEntity, x => x.Kod == currenEntity.Kod);
+            return BaseUpdate(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod);
         }
 
         public bool Delete(BaseEntity entity)
@@ -65,14 +65,11 @@ namespace Burak.OgrenciTakip.Bll.General
             return BaseDelete(entity,KartTuru.Okul);
         }
 
-        public bool UpDate(BaseEntity oldEntity, BaseEntity currentEntity)
-        {
-            throw new NotImplementedException();
-        }
-
         public string YeniKodVer()
         {
-            throw new NotImplementedException();
+            return BaseYeniKodVer(KartTuru.Okul, x => x.Kod);
         }
+
+
     }
 }
