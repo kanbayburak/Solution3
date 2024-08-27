@@ -61,9 +61,46 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             btnSil.Enabled = !buttonEnabledDurumu;
         }
 
-        internal static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
+        public static long IdOlustur(this IslemTuru islemTuru, BaseEntity selectedEntity)
         {
-            throw new NotImplementedException();
+            //2017 12 30 18 04 23 55 654
+            string SifirEkle(string deger)
+            {
+                if (deger.Length == 1)
+                {
+                    return "0" + deger;
+                }
+                return deger;
+            }
+
+            string UcBasamakYap(string deger)
+            {
+                switch (deger.Length)
+                {
+                    case 1:
+                        return "00" + deger;
+                    case 2:
+                        return "0" + deger;
+                }
+                return deger;
+            }
+
+
+            string Id()
+            {
+                var yil = DateTime.Now.Date.Year.ToString();
+                var ay = SifirEkle(DateTime.Now.Date.Month.ToString());
+                var gun = SifirEkle(DateTime.Now.Date.Day.ToString());
+                var saat = SifirEkle(DateTime.Now.Hour.ToString());
+                var dakika = SifirEkle(DateTime.Now.Minute.ToString());
+                var saniye = SifirEkle(DateTime.Now.Second.ToString());
+                var milisaniye = UcBasamakYap(DateTime.Now.Millisecond.ToString());
+                var random = SifirEkle(new Random().Next(0, 99).ToString());
+
+                return yil + ay + gun + saat + dakika + saniye + milisaniye + random;
+            }
+            var id = Id();
+            return islemTuru == IslemTuru.EntityUpdate ? selectedEntity.Id : long.Parse(Id()); //parse üret ve ıd ye gönder demek 
         }
     }
 }

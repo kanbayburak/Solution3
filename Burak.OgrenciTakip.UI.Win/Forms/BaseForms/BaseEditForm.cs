@@ -43,7 +43,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             GuncelNesneOlustur();
             //SablonYukle();
             //ButonGizleGoster();
-            //Id = IslemTuru.IdOlustur(OldEntity);
+            Id = IslemTuru.IdOlustur(OldEntity);
 
 
             //güncelleme yapılacak
