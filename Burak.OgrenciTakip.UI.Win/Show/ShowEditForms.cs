@@ -26,7 +26,20 @@ namespace Burak.OgrenciTakip.UI.Win.Show
                 return frm.RefresYapilacak ? frm.Id : 0;  //formda değişiklik yapılacaksa true oldu o zaman bu formun id sibni geri gönder, değilse 0 olarak gönder diyor
             }
         }
+        public static long ShowDialogEditForm(KartTuru kartTuru, long id, params object[] prm)
+        {
+            //yetki kontrolü gelecek 
 
-       
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+
+                //buradaki IslemTuru, Id, Yukle BaseEditForm dan geldi
+                frm.BaseIslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+                frm.Id = id;
+                frm.Yukle();
+                frm.ShowDialog();
+                return frm.RefresYapilacak ? frm.Id : 0;  //formda değişiklik yapılacaksa true oldu o zaman bu formun id sibni geri gönder, değilse 0 olarak gönder diyor
+            }
+        }
     }
 }

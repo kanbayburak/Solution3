@@ -70,7 +70,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                 btnDuzelt.PerformClick();
         }
 
-        private void ShowEditForm(long id)
+        protected virtual void ShowEditForm(long id)
         {
             var result = FormShow.ShowDialogEditForm(BaseKartTuru, id);
         }
