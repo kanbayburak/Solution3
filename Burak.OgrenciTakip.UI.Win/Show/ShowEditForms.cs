@@ -19,7 +19,7 @@ namespace Burak.OgrenciTakip.UI.Win.Show
             {
 
                 //buradaki IslemTuru, Id, Yukle BaseEditForm dan geldi
-                frm.IslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+                frm.BaseIslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
                 frm.Id = id;
                 frm.Yukle();
                 frm.ShowDialog();

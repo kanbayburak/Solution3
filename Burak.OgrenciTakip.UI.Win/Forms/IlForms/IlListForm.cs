@@ -1,29 +1,29 @@
 ﻿using Burak.OgrenciTakip.Bll.General;
-using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 using Burak.OgrenciTakip.UI.Win.Functions;
 using Burak.OgrenciTakip.UI.Win.Show;
+using Burak.OgrenciTakip.Common.Enums;
 
-namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
+namespace Burak.OgrenciTakip.UI.Win.Forms.IlForms
 {
-    public partial class OkulListForm : BaseListForm
+    public partial class IlListForm : BaseListForm
     {
-        public OkulListForm()
+        public IlListForm()
         {
             InitializeComponent();
-            Bll = new OkulBll();
+            Bll = new IlBll();
         }
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            BaseKartTuru = KartTuru.Okul;
-            FormShow = new ShowEditForms<OkulEditForm>();
+            BaseKartTuru = KartTuru.Il;
+            FormShow = new ShowEditForms<IlEditForm>();
             Navigator = longNavigator.Navigator;
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((OkulBll)Bll).List(FilterFunctions.Filter<Okul>(AktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((IlBll)Bll).List(FilterFunctions.Filter<Il>(AktifKartlariGoster));
         }
     }
 }

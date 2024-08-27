@@ -14,12 +14,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
     public partial class BaseEditForm : RibbonForm
     {
-        protected internal IslemTuru IslemTuru;
+        protected internal IslemTuru BaseIslemTuru;
         protected internal long Id;
         protected internal bool RefresYapilacak;
         protected MyDataLayoutControl DataLayoutControl;
         protected IBaseBll Bll;
-        protected KartTuru KartTuru;
+        protected KartTuru BaseKartTuru;
         protected BaseEntity OldEntity;
         protected BaseEntity CurrentEntity;
         protected bool IsLoaded;
@@ -46,7 +46,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             GuncelNesneOlustur();
             //SablonYukle();
             //ButonGizleGoster();
-            Id = IslemTuru.IdOlustur(OldEntity);
+            Id = BaseIslemTuru.IdOlustur(OldEntity);
 
 
             //güncelleme yapılacak
@@ -58,7 +58,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             if (e.Item == btnYeni)
             {
-                IslemTuru = IslemTuru.EntityInsert;
+                BaseIslemTuru = IslemTuru.EntityInsert;
                 Yukle();
             }
             else if (e.Item == btnKaydet)
@@ -100,7 +100,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                switch (IslemTuru)
+                switch (BaseIslemTuru)
                 {
                     case IslemTuru.EntityInsert:
                         if (EntityInsert())
@@ -123,7 +123,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                         Close();
                     }
                     else
-                        IslemTuru = IslemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : IslemTuru;
+                        BaseIslemTuru = BaseIslemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : BaseIslemTuru;
                     return true;
                 }
                 return false;

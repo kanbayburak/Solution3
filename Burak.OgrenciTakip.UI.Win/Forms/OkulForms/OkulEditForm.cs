@@ -16,17 +16,17 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
 
             DataLayoutControl = myDataLayoutControl;
             Bll = new OkulBll(myDataLayoutControl);
-            KartTuru = KartTuru.Okul;
+            BaseKartTuru = KartTuru.Okul;
             EventsLoad();
         }
 
         protected internal override void Yukle()
         {
-            OldEntity = IslemTuru == IslemTuru.EntityInsert ? new OkulS() : ((OkulBll)Bll).Single(FilterFunctions.Filter<Okul>(Id));
+            OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OkulS() : ((OkulBll)Bll).Single(FilterFunctions.Filter<Okul>(Id));
             NesneyiKontrollereBagla();
 
-            if (IslemTuru != IslemTuru.EntityInsert) return;
-            Id = IslemTuru.IdOlustur(OldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((OkulBll)Bll).YeniKodVer();
             txtOkulAdi.Focus();
         }
