@@ -18,6 +18,16 @@ namespace Burak.OgrenciTakip.UI.Win.Show
             frm.Yukle();
             frm.Show();
         }
+        public static void ShowListForm(KartTuru kartTuru, params object[] prm)
+        {
+            //yetki kontrolü gelecek 
+
+            var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm);
+            frm.MdiParent = Form.ActiveForm;
+
+            frm.Yukle();
+            frm.Show();
+        }
         public static BaseEntity ShowDialogListForm(KartTuru kartTuru, long? seciliGelecekId, params object[] prm)
         {
             //yetki kontrolleri olacak 

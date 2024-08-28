@@ -3,11 +3,13 @@ using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Model.Entities.Base;
 using Burak.OgrenciTakip.UI.Win.Functions;
 using Burak.OgrenciTakip.UI.Win.Show.Interfaces;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Windows.Forms;
+
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
@@ -23,6 +25,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected IBaseBll Bll;
         protected ControlNavigator Navigator;
         protected internal long? SeciliGelecekId;
+        protected BarItem[] ShowItems;
+        protected BarItem[] HideItems;
         public BaseListForm()
         {
             InitializeComponent();
@@ -72,7 +76,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             barEnterAciklama.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
             btnAktifPasifKartlar.Visibility = AktifPasifButonGoster ? BarItemVisibility.Always : !IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
 
-            //Güncellenecek
+            ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
+            HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);   //bugrada high değil hide olmalı
         }
 
         protected internal void Yukle()
@@ -249,6 +254,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                     Tablo.HideCustomization();
                 }
             }
+            else if (e.Item == btnBagliKartlar)
+            {
+                BagliKartAC();
+            }
 
             else if (e.Item == btnYazdir)
             {
@@ -267,6 +276,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void BagliKartAC() { }
 
         private void Tablo_DoubleClick(object sender, EventArgs e)
         {

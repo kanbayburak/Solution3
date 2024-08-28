@@ -1,4 +1,5 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
+using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
 using Burak.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
@@ -33,7 +34,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
         {
             if (e.Item == btnOkulKartlari)
                 ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
-
+            else if (e.Item == btnIlKartlari)
+                ShowListForms<IlListForm>.ShowListForm(KartTuru.Il);
         }
     }
 }

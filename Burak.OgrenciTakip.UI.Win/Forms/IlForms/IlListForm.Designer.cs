@@ -33,7 +33,7 @@
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.codIlAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIlAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
@@ -87,7 +87,7 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colKod,
-            this.codIlAdi,
+            this.colIlAdi,
             this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
@@ -134,18 +134,18 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 120;
             // 
-            // codIlAdi
+            // colIlAdi
             // 
-            this.codIlAdi.Caption = "İl Adı";
-            this.codIlAdi.FieldName = "İlAdi";
-            this.codIlAdi.Name = "codIlAdi";
-            this.codIlAdi.OptionsColumn.AllowEdit = false;
-            this.codIlAdi.StatusBarAciklama = null;
-            this.codIlAdi.StatusBarKisaYol = "F4 :";
-            this.codIlAdi.StatusBarKisaYolAciklama = null;
-            this.codIlAdi.Visible = true;
-            this.codIlAdi.VisibleIndex = 1;
-            this.codIlAdi.Width = 250;
+            this.colIlAdi.Caption = "İl Adı";
+            this.colIlAdi.FieldName = "İlAdi";
+            this.colIlAdi.Name = "colIlAdi";
+            this.colIlAdi.OptionsColumn.AllowEdit = false;
+            this.colIlAdi.StatusBarAciklama = null;
+            this.colIlAdi.StatusBarKisaYol = "F4 :";
+            this.colIlAdi.StatusBarKisaYolAciklama = null;
+            this.colIlAdi.Visible = true;
+            this.colIlAdi.VisibleIndex = 1;
+            this.colIlAdi.Width = 250;
             // 
             // colAciklama
             // 
@@ -187,7 +187,7 @@
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;
         private UserControls.Grid.MyGridColumn colKod;
-        private UserControls.Grid.MyGridColumn codIlAdi;
+        private UserControls.Grid.MyGridColumn colIlAdi;
         private UserControls.Grid.MyGridColumn colAciklama;
     }
 }
