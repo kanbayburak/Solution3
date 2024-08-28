@@ -169,7 +169,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void Gerial()
         {
-            throw new NotImplementedException();
+            if (Messages.HayirSeciliEvetHayir("Yapılan Değişiklikler Geri Alınacaktır. Onaylıyor musunuz?", "Geri Al, Onay") != DialogResult.Yes) return;
+
+            if (BaseIslemTuru == IslemTuru.EntityUpdate)
+                Yukle();
+            else
+                Close();
         }
 
         private bool Kaydet(bool kapanis)
