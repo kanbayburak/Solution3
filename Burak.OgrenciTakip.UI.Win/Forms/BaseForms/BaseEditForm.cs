@@ -83,6 +83,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             Cursor.Current = DefaultCursor;
         }
+        protected virtual void SecimYap(object sender) { }
 
         private void EntityDelete()
         {

@@ -62,5 +62,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
             ButonEnabledDurumu();
 
         }
+        protected override void SecimYap(object sender)
+        {
+
+        }
     }
 }
