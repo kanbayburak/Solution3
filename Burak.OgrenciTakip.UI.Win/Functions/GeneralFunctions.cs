@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Windows.Forms;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Common.Messages;
 using Burak.OgrenciTakip.Model.Entities.Base;
+using Burak.OgrenciTakip.UI.Win.UserControls.Controls;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Grid;
 
@@ -112,6 +114,17 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             }
             var id = Id();
             return islemTuru == IslemTuru.EntityUpdate ? selectedEntity.Id : long.Parse(Id()); //parse üret ve ıd ye gönder demek 
+        }
+        public static void ControlEnabledChange(this MyButtonEdit baseEdit, Control prmEdit)
+        {
+            switch (prmEdit)
+            {
+                case MyButtonEdit edt:
+                    edt.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+                    edt.Id = null;
+                    edt.EditValue = null;
+                    break;
+            }
         }
     }
 }
