@@ -98,6 +98,14 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         {
             var result = FormShow.ShowDialogEditForm(BaseKartTuru, id);
         }
+        protected void ShowEditFormDefault(long id)
+        {
+            if (id <= 0) return;
+            AktifKartlariGoster = true;
+            FormCaptionAyarla();
+            Tablo.RowFocus("Id", id);
+
+        }
         private void EntityDelete()
         {
             throw new NotImplementedException();
