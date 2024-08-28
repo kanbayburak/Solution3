@@ -41,6 +41,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             //Forms Events
             Load += BaseEditForm_Load;
+            FormClosing += BasedEditForm_FormClosing;
 
             void ControlEvents(Control control)
             {
@@ -71,6 +72,21 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                 foreach (var layout in DataLayoutControls)
                     foreach (Control ctrl in layout.Controls)
                         ControlEvents(ctrl);
+        }
+
+        private void BasedEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //SablonKaydet();
+
+            if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
+
+            if (!Kaydet(true))
+                e.Cancel = true;
+        }
+
+        private void SablonKaydet()
+        {
+            throw new NotImplementedException();
         }
 
         protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
@@ -207,7 +223,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                     }
                     else
                         BaseIslemTuru = BaseIslemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : BaseIslemTuru;
-                    return true;
+                    return false;
                 }
                 return false;
             }
