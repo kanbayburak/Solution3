@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.Bll.General
 {
-    public class OkulBll: BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll
+    public class OkulBll: BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
     {
         public OkulBll() { }
 

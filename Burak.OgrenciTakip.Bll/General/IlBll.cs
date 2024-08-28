@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.Bll.General
 {
-    public class IlBll : BaseBll<Il,OgrenciTakipContext>, IBaseGenelBll
+    public class IlBll : BaseBll<Il,OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
     {
         public IlBll() { }
         public IlBll(Control ctrl):base(ctrl) { }

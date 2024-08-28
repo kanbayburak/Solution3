@@ -162,7 +162,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void EntityDelete()
         {
-            throw new NotImplementedException();
+            if (!((IBaseCommonBll)Bll).Delete(OldEntity)) return;
+            RefresYapilacak = true;
+            Close();
         }
 
         private void Gerial()
