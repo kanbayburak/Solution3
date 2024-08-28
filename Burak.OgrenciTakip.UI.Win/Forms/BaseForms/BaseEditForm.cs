@@ -6,6 +6,8 @@ using Burak.OgrenciTakip.UI.Win.Functions;
 using Burak.OgrenciTakip.UI.Win.UserControls.Controls;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 using System;
 using System.Windows.Forms;
 
@@ -18,6 +20,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal long Id;
         protected internal bool RefresYapilacak;
         protected MyDataLayoutControl DataLayoutControl;
+        protected MyDataLayoutControl[] DataLayoutControls;
         protected IBaseBll Bll;
         protected KartTuru BaseKartTuru;
         protected BaseEntity OldEntity;
@@ -38,6 +41,76 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             //Forms Events
             Load += BaseEditForm_Load;
+
+            void ControlEvents(Control control)
+            {
+                control.KeyDown += Control_Keydown;
+               
+
+                switch (control)  //bu kısımda sıralama önemli MyButtonEdit sonrasında BaseEdit olmalı çünkü MyButtonEdit, BaseEditten implament olduğu için
+                {
+                    case MyButtonEdit edt:
+                        edt.IdChanged += Control_IdChanged;
+                        edt.ButtonClick += Control_ButtonClick;
+                        edt.DoubleClick += Control_DoubleClick;
+                        break;
+                    case BaseEdit edt:    //burada formda değişiklik yapıldığı vakit kaydettiğinde güncelleme işlemi yapar
+                        edt.EditValueChanged += Control_EditValueChanged; 
+                        break;
+                }
+            }
+
+            if (DataLayoutControls == null)
+            {
+                if (DataLayoutControl == null) return;
+                foreach (Control ctrl in DataLayoutControl.Controls)
+                    ControlEvents(ctrl);
+            }
+            else
+                foreach (var layout in DataLayoutControls)
+                    foreach (Control ctrl in layout.Controls)
+                        ControlEvents(ctrl);
+        }
+
+        private void Control_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!IsLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_DoubleClick(object sender, EventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_IdChanged(object sender, IdChangedEvenetArgs e)
+        {
+            if (!IsLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_Keydown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Close();
+            if (sender is MyButtonEdit edt)
+                switch (e.KeyCode)
+                {
+                    case Keys.Delete when e.Control && e.Shift: // burada ctrlshift delete basında şu işlmei yaparsın diye tanımladık
+                        edt.Id = null;
+                        edt.EditValue = null;
+                        break;
+
+                    case Keys.F4:
+                    case Keys.Down when e.Modifiers == Keys.Alt:
+                        SecimYap(edt);
+                        break;
+                }
         }
 
         private void BaseEditForm_Load(object sender, EventArgs e)

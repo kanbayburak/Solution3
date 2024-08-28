@@ -5,6 +5,7 @@ using Burak.OgrenciTakip.Model.Dto;
 using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 using Burak.OgrenciTakip.UI.Win.Functions;
+using DevExpress.XtraEditors;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
 {
@@ -64,7 +65,15 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.OkulForms
         }
         protected override void SecimYap(object sender)
         {
+            if (!(sender is ButtonEdit)) return;
 
+            using (var sec = new SelectFunctions())
+            {
+                if (sender == txtIl)
+                    sec.Sec(txtIl);
+                else if (sender == txtIlce)
+                    sec.Sec(txtIlce, txtIl);
+            }
         }
     }
 }
