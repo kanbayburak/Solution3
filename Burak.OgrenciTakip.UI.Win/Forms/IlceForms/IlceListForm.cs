@@ -34,7 +34,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
         protected override void ShowEditForm(long id)
         {
             var result = ShowEditForms<IlceEditForm>.ShowDialogEditForm(KartTuru.Ilce, id, _ilId, _ilAdi);
-            //ShowEditFormDefault(result);
+            ShowEditFormDefault(result);
         }
     }
 }

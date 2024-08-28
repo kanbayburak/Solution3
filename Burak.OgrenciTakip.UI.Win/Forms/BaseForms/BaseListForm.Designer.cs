@@ -101,7 +101,7 @@
             this.barGonderAciklama = new DevExpress.XtraBars.BarStaticItem();
             this.barCikis = new DevExpress.XtraBars.BarStaticItem();
             this.barCikisAciklama = new DevExpress.XtraBars.BarStaticItem();
-            this.btnAktikPasifKartlar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAktifPasifKartlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -149,7 +149,7 @@
             this.barGonderAciklama,
             this.barCikis,
             this.barCikisAciklama,
-            this.btnAktikPasifKartlar,
+            this.btnAktifPasifKartlar,
             this.btnExcelDosyalari,
             this.btnStandartExcelDosyasi,
             this.btnFormatliExcelDosyasi,
@@ -563,31 +563,31 @@
             // 
             // btnAktikPasifKartlar
             // 
-            this.btnAktikPasifKartlar.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.btnAktikPasifKartlar.Caption = "Pasif Kartlar";
-            this.btnAktikPasifKartlar.Id = 33;
-            this.btnAktikPasifKartlar.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.article_16x16;
-            this.btnAktikPasifKartlar.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.article_32x32;
-            this.btnAktikPasifKartlar.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktikPasifKartlar.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnAktikPasifKartlar.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnAktikPasifKartlar.ItemAppearance.Hovered.Options.UseForeColor = true;
-            this.btnAktikPasifKartlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktikPasifKartlar.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAktikPasifKartlar.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnAktikPasifKartlar.ItemAppearance.Normal.Options.UseForeColor = true;
-            this.btnAktikPasifKartlar.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktikPasifKartlar.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAktikPasifKartlar.ItemAppearance.Pressed.Options.UseFont = true;
-            this.btnAktikPasifKartlar.ItemAppearance.Pressed.Options.UseForeColor = true;
-            this.btnAktikPasifKartlar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
-            this.btnAktikPasifKartlar.Name = "btnAktikPasifKartlar";
+            this.btnAktifPasifKartlar.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.btnAktifPasifKartlar.Caption = "Pasif Kartlar";
+            this.btnAktifPasifKartlar.Id = 33;
+            this.btnAktifPasifKartlar.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.article_16x16;
+            this.btnAktifPasifKartlar.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.article_32x32;
+            this.btnAktifPasifKartlar.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAktifPasifKartlar.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnAktifPasifKartlar.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btnAktifPasifKartlar.ItemAppearance.Hovered.Options.UseForeColor = true;
+            this.btnAktifPasifKartlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAktifPasifKartlar.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Maroon;
+            this.btnAktifPasifKartlar.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnAktifPasifKartlar.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.btnAktifPasifKartlar.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAktifPasifKartlar.ItemAppearance.Pressed.ForeColor = System.Drawing.Color.Maroon;
+            this.btnAktifPasifKartlar.ItemAppearance.Pressed.Options.UseFont = true;
+            this.btnAktifPasifKartlar.ItemAppearance.Pressed.Options.UseForeColor = true;
+            this.btnAktifPasifKartlar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
+            this.btnAktifPasifKartlar.Name = "btnAktikPasifKartlar";
             toolTipTitleItem11.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem11.Text = "(Ctrl+L)";
             toolTipItem11.Text = "Aktif Veya Pasif Kartları Listele";
             superToolTip11.Items.Add(toolTipTitleItem11);
             superToolTip11.Items.Add(toolTipItem11);
-            this.btnAktikPasifKartlar.SuperTip = superToolTip11;
+            this.btnAktifPasifKartlar.SuperTip = superToolTip11;
             // 
             // ribbonPage1
             // 
@@ -633,7 +633,7 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barGonderAciklama);
             this.ribbonStatusBar1.ItemLinks.Add(this.barCikis, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.barCikisAciklama);
-            this.ribbonStatusBar1.ItemLinks.Add(this.btnAktikPasifKartlar);
+            this.ribbonStatusBar1.ItemLinks.Add(this.btnAktifPasifKartlar);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 506);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
@@ -700,7 +700,7 @@
         private DevExpress.XtraBars.BarStaticItem barGonderAciklama;
         private DevExpress.XtraBars.BarStaticItem barCikis;
         private DevExpress.XtraBars.BarStaticItem barCikisAciklama;
-        private DevExpress.XtraBars.BarButtonItem btnAktikPasifKartlar;
+        private DevExpress.XtraBars.BarButtonItem btnAktifPasifKartlar;
         private DevExpress.XtraBars.BarSubItem btnExcelDosyalari;
         private DevExpress.XtraBars.BarButtonItem btnStandartExcelDosyasi;
         private DevExpress.XtraBars.BarButtonItem btnFormatliExcelDosyasi;
