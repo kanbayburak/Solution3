@@ -17,6 +17,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected KartTuru BaseKartTuru;
         protected internal GridView Tablo;
         protected bool AktifKartlariGoster = true;
+        protected internal bool AktifPasifButonGoster = false;
         protected internal bool MultiSelect;
         protected internal BaseEntity SelectedEntity;
         protected IBaseBll Bll;
@@ -51,7 +52,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         private void BaseListForm_Shown(object sender, EventArgs e)
         {
             Tablo.Focus();
-            //ButonGizleGoster();
+            ButonGizleGoster();
             //SutunGizleGoster();
 
 
@@ -66,7 +67,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void ButonGizleGoster()
         {
-            throw new NotImplementedException();
+            btnSec.Visibility = AktifPasifButonGoster ? BarItemVisibility.Never : IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            barEnter.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            barEnterAciklama.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            btnAktifPasifKartlar.Visibility = AktifPasifButonGoster ? BarItemVisibility.Always : !IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+
+            //Güncellenecek
         }
 
         protected internal void Yukle()
