@@ -37,7 +37,30 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             //Table Events
             Tablo.DoubleClick += Tablo_DoubleClick;
             Tablo.KeyDown += Tablo_KeyDown;
+
             //Form Events
+            Shown += BaseListForm_Shown;
+        }
+
+        private void BaseListForm_Shown(object sender, EventArgs e)
+        {
+            Tablo.Focus();
+            //ButonGizleGoster();
+            //SutunGizleGoster();
+
+
+            if (IsMdiChild || SeciliGelecekId == null) return;
+            Tablo.RowFocus("Id", SeciliGelecekId);
+        }
+
+        private void SutunGizleGoster()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ButonGizleGoster()
+        {
+            throw new NotImplementedException();
         }
 
         protected internal void Yukle()
