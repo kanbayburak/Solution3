@@ -3,6 +3,7 @@ using Burak.OgrenciTakip.Bll.Interfaces;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Common.Functions;
 using Burak.OgrenciTakip.Common.Messages;
+using Burak.OgrenciTakip.Model.Attributes;
 using Burak.OgrenciTakip.Model.Entities.Base;
 using BurakOgrenciTakip.Interfaces;
 using System;
@@ -23,7 +24,51 @@ namespace Burak.OgrenciTakip.Bll.Base
         private IUnitOfWork<T> _uow;  //repostory imize  buradan ynai UnitOfWork  den erişiyor olacağız 
         #endregion
 
-       
+        private bool Validation(IslemTuru islemTuru, BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
+        {
+            var errorControl = GetValidationErrorControl();
+
+            if (errorControl == null) return true;
+            _ctrl.Controls[errorControl].Focus();
+            return false;
+
+            string GetValidationErrorControl()
+            {
+                string MukerrerKod()
+                {
+                    foreach (var property in typeof(T).GetPropertyAttributesFromType<Kod>())
+                    {
+                        if (property.Attribute == null) continue;
+
+                        if ((islemTuru == IslemTuru.EntityInsert || oldEntity.Kod == currentEntity.Kod) && islemTuru == IslemTuru.EntityUpdate) continue;
+
+                        if (_uow.Rep.Count(filter) < 1) continue;
+
+                        Messages.MukerrerKayitHataMesaji(property.Attribute.Description);
+                        return property.Attribute.ControlName;
+                    }
+                    return null;
+                }
+                string HataliGiris()
+                {
+                    foreach (var property in typeof(T).GetPropertyAttributesFromType<ZorunluAlan>())
+                    {
+                        if (property.Attribute == null) continue;
+                        var value = property.Property.GetValue(currentEntity);
+
+                        if (property.Property.PropertyType == typeof(long))
+                            if ((long)value == 0) value = null;
+
+                        if (!string.IsNullOrEmpty(value?.ToString())) continue;
+
+                        Messages.HataliVeriMesaji(property.Attribute.Description);
+                        return property.Attribute.ControlName;
+                    }
+                    return null;
+                }
+                return HataliGiris() ?? MukerrerKod();
+            }
+        }
 
         //1. ctorumuz
         protected BaseBll() { } //protected dememizin nedeni sadece implamente eden classlar ulaşmasını istiyoruz 
@@ -48,13 +93,8 @@ namespace Burak.OgrenciTakip.Bll.Base
         protected bool BaseInsert(BaseEntity entity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreatUnitOfWork<T, TContext>(ref _uow);
-
-            //Validation kod blokları
-           
+            if (!Validation(IslemTuru.EntityInsert, null, entity, filter)) return false;            //Validation kod blokları
             _uow.Rep.Insert(entity.EntityConvert<T>());
-
-            //burada gelen entity i Convert yapıp o şekilde repository e göndereceğiz
-            //_uow.Rep.Insert(entity.EntityConvert<T>());
             return _uow.Save();
         }
 
@@ -62,15 +102,9 @@ namespace Burak.OgrenciTakip.Bll.Base
         protected bool BaseUpdate(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreatUnitOfWork<T, TContext>(ref _uow);
-
-            //validation işlmeleri
-            
-
-
-            //sadece değişen propertylere update olacak 
-            var degisenAlanlar = oldEntity.DegisenAlanlariGetir(currentEntity);
-            //değişen alanlara sahipsek
-            if (degisenAlanlar.Count == 0) return true;
+            if (!Validation(IslemTuru.EntityUpdate, oldEntity, currentEntity, filter)) return false;             //validation işlmeleri
+            var degisenAlanlar = oldEntity.DegisenAlanlariGetir(currentEntity);            //sadece değişen propertylere update olacak 
+            if (degisenAlanlar.Count == 0) return true;            //değişen alanlara sahipsek
 
             _uow.Rep.Update(currentEntity.EntityConvert<T>(), degisenAlanlar);
             return _uow.Save();
