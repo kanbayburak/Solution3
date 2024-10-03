@@ -1,37 +1,59 @@
-﻿using Burak.OgrenciTakip.Bll.General;
+﻿//using Burak.OgrenciTakip.Bll.General;
+//using Burak.OgrenciTakip.Common.Enums;
+//using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
+
+//namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
+//{
+//    public partial class IlceEditForm : BaseEditForm
+//    {
+//        private readonly long _ilId;
+//        private readonly string _ilAdi;
+//        public IlceEditForm(params object[] prm)
+//        {
+//            InitializeComponent();
+
+//            _ilId = (long)prm[0];
+//            _ilAdi = prm[1].ToString();
+
+//            DataLayoutControl = myDataLayoutControl;
+//            Bll = new OkulBll(myDataLayoutControl);
+//            BaseKartTuru = KartTuru.Okul;
+//            EventsLoad();
+//        }
+//    }
+//}
+
+
+using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
+using Burak.OgrenciTakip.Bll.General;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Model.Entities;
-using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 using Burak.OgrenciTakip.UI.Win.Functions;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
 {
     public partial class IlceEditForm : BaseEditForm
     {
+        
         #region Variables
         private readonly long _ilId;
         private readonly string _ilAdi;
         #endregion
-
         public IlceEditForm(params object[] prm)
         {
             InitializeComponent();
-
             _ilId = (long)prm[0];
             _ilAdi = prm[1].ToString();
-
             DataLayoutControl = myDataLayoutControl;
             Bll = new IlceBll(myDataLayoutControl);
             BaseKartTuru = KartTuru.Ilce;
             EventsLoad();
         }
-
         protected internal override void Yukle()
         {
             OldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Ilce() : ((IlceBll)Bll).Single(FilterFunctions.Filter<Ilce>(Id));
             NesneyiKontrollereBagla();
             Text = Text + $"- ( {_ilAdi} )";
-
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             //Id = BaseIslemTuru.IdOlustur(OldEntity);
             txtKod.Text = ((IlceBll)Bll).YeniKodVer(x => x.IlId == _ilId);
@@ -40,12 +62,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (Ilce)OldEntity;
-
             txtKod.Text = entity.Kod;
             txtIlceAdi.Text = entity.IlceAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
-
         }
         protected override void GuncelNesneOlustur()
         {
@@ -57,11 +77,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
                 IlId = _ilId,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn,
-
             };
-
             ButonEnabledDurumu();
-
         }
         protected override bool EntityInsert()
         {
