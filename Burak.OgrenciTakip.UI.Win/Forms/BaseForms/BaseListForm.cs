@@ -27,6 +27,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal long? SeciliGelecekId;
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
+
         public BaseListForm()
         {
             InitializeComponent();

@@ -53,17 +53,7 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             return VeriDegisimYeri.VeriDegisimiYok;
         }
 
-        public static void ButtonEnabledDurumu<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
-        {
-            var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
-            var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
-
-            btnKaydet.Enabled = buttonEnabledDurumu;
-            btnFarkliKaydet.Enabled = islemTuru != IslemTuru.EntityInsert;
-            btnSil.Enabled = !buttonEnabledDurumu;
-        }
-
-        internal static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
+        public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
         {
             var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
             var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
@@ -73,6 +63,18 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             btnYeni.Enabled = !buttonEnabledDurumu;
             btnSil.Enabled = !buttonEnabledDurumu;
         }
+
+        public static void ButtonEnabledDurumu<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
+        {
+            var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
+            var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
+
+            btnKaydet.Enabled = buttonEnabledDurumu;
+            btnFarkliKaydet.Enabled = islemTuru != IslemTuru.EntityInsert;  //yeni bir kayıt olmadığı müddetçe kaydetin enable durumunu aktive et
+            btnSil.Enabled = !buttonEnabledDurumu;
+        }
+
+       
 
         public static long IdOlustur(this IslemTuru islemTuru, BaseEntity selectedEntity)
         {
@@ -153,6 +155,11 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
         {
             if (e.Button != MouseButtons.Right) return;
             sagMenu.ShowPopup(Control.MousePosition);
+        }
+
+        internal static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

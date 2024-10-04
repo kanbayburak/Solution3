@@ -1,30 +1,4 @@
-﻿//using Burak.OgrenciTakip.Bll.General;
-//using Burak.OgrenciTakip.Common.Enums;
-//using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
-
-//namespace Burak.OgrenciTakip.UI.Win.Forms.IlceForms
-//{
-//    public partial class IlceEditForm : BaseEditForm
-//    {
-//        private readonly long _ilId;
-//        private readonly string _ilAdi;
-//        public IlceEditForm(params object[] prm)
-//        {
-//            InitializeComponent();
-
-//            _ilId = (long)prm[0];
-//            _ilAdi = prm[1].ToString();
-
-//            DataLayoutControl = myDataLayoutControl;
-//            Bll = new OkulBll(myDataLayoutControl);
-//            BaseKartTuru = KartTuru.Okul;
-//            EventsLoad();
-//        }
-//    }
-//}
-
-
-using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 using Burak.OgrenciTakip.Bll.General;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Model.Entities;

@@ -10,5 +10,7 @@ namespace Burak.OgrenciTakip.Common.Enums
         Il = 2,
         [Description("İlçe Kartı")]
         Ilce = 3,
+        [Description("Filtre Kartı")]
+        Filtre = 4,
     }
 }

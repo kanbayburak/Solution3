@@ -10,7 +10,8 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using System;
 using System.Windows.Forms;
-
+using DevExpress.XtraPrinting.Native;
+using DevExpress.Utils.Extensions;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
@@ -27,6 +28,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected BaseEntity CurrentEntity;
         protected bool IsLoaded;
         protected bool KayitSonrasiFormuKapat = true;
+        protected BarItem[] ShowItems;
+        protected BarItem[] HideItems;
 
         public BaseEditForm()
         {
@@ -135,10 +138,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         {
             IsLoaded = true;
             GuncelNesneOlustur();
-            //SablonYukle();
-            //ButonGizleGoster();
+            //SablonYukle();    //burada eksik bir kısım var muhtemelen 1. partın son videolarını izlemedim onlardan olabilir.
+            ButonGizleGoster();
             Id = BaseIslemTuru.IdOlustur(OldEntity);
-
 
             //güncelleme yapılacak
         }
@@ -166,6 +168,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                 //Yetki Kontrolleri
                 EntityDelete();
             }
+            else if (e.Item == btnUygula)
+                FiltreUygula();
 
             else if (e.Item == btnCikis)
             {
@@ -264,6 +268,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             if (!IsLoaded) return;
             GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity);  //buttonların enabled durumunu değiştirecek
         }
+        protected virtual void FiltreUygula() { }
 
+        private void ButonGizleGoster()
+        {
+            ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
+            HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
+        }
     }
 }
