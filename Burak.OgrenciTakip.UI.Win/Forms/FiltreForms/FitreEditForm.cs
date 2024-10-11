@@ -99,10 +99,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.FiltreForms
             txtFiltreMetni.ApplyFilter();
         }
 
-        protected override void ButonEnabledDurumu()
+        protected internal override void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity);  //buttonların enabled durumunu değiştirecek
+            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnFarkliKaydet, btnSil, BaseIslemTuru, OldEntity, CurrentEntity);
         }
 
     }

@@ -53,7 +53,18 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             return VeriDegisimYeri.VeriDegisimiYok;
         }
 
-        public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
+        //public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
+        //{
+        //    var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
+        //    var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
+
+        //    btnKaydet.Enabled = buttonEnabledDurumu;
+        //    btnGerial.Enabled = buttonEnabledDurumu;
+        //    btnYeni.Enabled = !buttonEnabledDurumu;
+        //    btnSil.Enabled = !buttonEnabledDurumu;
+        //}
+
+        public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, T oldEntity, T currentEntity)
         {
             var veriDegisimYeri = VeriDegisimYeirGetir(oldEntity, currentEntity);
             var buttonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan;
@@ -157,9 +168,5 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             sagMenu.ShowPopup(Control.MousePosition);
         }
 
-        internal static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGerial, BarButtonItem btnSil, BaseEntity oldEntity, BaseEntity currentEntity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

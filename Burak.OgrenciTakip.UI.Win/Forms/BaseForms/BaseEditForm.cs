@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.Utils.Extensions;
 
+
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
     public partial class BaseEditForm : RibbonForm
@@ -53,6 +54,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
                 switch (control)  //bu kısımda sıralama önemli MyButtonEdit sonrasında BaseEdit olmalı çünkü MyButtonEdit, BaseEditten implament olduğu için
                 {
+                    case FilterControl edt:
+                        edt.FilterChanged += Control_EditValueChanged;
+                        break;
                     case MyButtonEdit edt:
                         edt.IdChanged += Control_IdChanged;
                         edt.EnabledChange += Control_EnabledChange;
@@ -263,10 +267,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal virtual void Yukle() {}
         protected virtual void NesneyiKontrollereBagla() { }
         protected virtual void GuncelNesneOlustur() { }
-        protected virtual void ButonEnabledDurumu()
+        protected internal virtual void ButonEnabledDurumu()
         {
             if (!IsLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity);  //buttonların enabled durumunu değiştirecek
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGerial, btnSil, OldEntity, CurrentEntity);  
         }
         protected virtual void FiltreUygula() { }
 

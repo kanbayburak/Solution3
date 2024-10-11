@@ -1,7 +1,10 @@
 ﻿using Burak.OgrenciTakip.Bll.Interfaces;
 using Burak.OgrenciTakip.Common.Enums;
+using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.Model.Entities.Base;
+using Burak.OgrenciTakip.UI.Win.Forms.FiltreForms;
 using Burak.OgrenciTakip.UI.Win.Functions;
+using Burak.OgrenciTakip.UI.Win.Show;
 using Burak.OgrenciTakip.UI.Win.Show.Interfaces;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
@@ -15,6 +18,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
     public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private long _filtreId;
+        private bool _formSablonKayitEdilecek;
+        private bool _tabloSablonKayitEdilecek;
         protected IBaseFormShow FormShow;
         protected KartTuru BaseKartTuru;
         protected internal GridView Tablo;
@@ -151,7 +157,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         }
         private void FiltreSec()
         {
-            throw new NotImplementedException();
+            var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
+
+            if (entity == null) return;
+
+            _filtreId = entity.Id;
+            Tablo.ActiveFilterString = entity.FiltreAdi;
         }
         private void Yazdir()
         {

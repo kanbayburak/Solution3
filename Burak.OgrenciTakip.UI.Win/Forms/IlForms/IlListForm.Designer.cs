@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IlListForm));
             this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
@@ -43,6 +44,8 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ribbonControl.OptionsMenuMinWidth = 449;
             // 
             // 
             // 
@@ -50,24 +53,33 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl.Size = new System.Drawing.Size(1253, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
+            // 
+            // btnGonder
+            // 
+            this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
+            this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
             // 
             // longNavigator
             // 
             this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 482);
+            this.longNavigator.Location = new System.Drawing.Point(0, 592);
+            this.longNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1074, 24);
+            this.longNavigator.Size = new System.Drawing.Size(1253, 30);
             this.longNavigator.TabIndex = 2;
             // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 109);
+            this.grid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grid.Location = new System.Drawing.Point(0, 135);
             this.grid.MainView = this.tablo;
+            this.grid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1074, 373);
+            this.grid.Size = new System.Drawing.Size(1253, 457);
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -89,6 +101,7 @@
             this.colKod,
             this.colIlAdi,
             this.colAciklama});
+            this.tablo.DetailHeight = 431;
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -113,11 +126,13 @@
             // 
             this.colId.Caption = "Id";
             this.colId.FieldName = "Id";
+            this.colId.MinWidth = 23;
             this.colId.Name = "colId";
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             this.colId.StatusBarAciklama = null;
             this.colId.StatusBarKisaYol = "F4 :";
             this.colId.StatusBarKisaYolAciklama = null;
+            this.colId.Width = 87;
             // 
             // colKod
             // 
@@ -125,6 +140,7 @@
             this.colKod.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colKod.Caption = "Kod";
             this.colKod.FieldName = "Kod";
+            this.colKod.MinWidth = 23;
             this.colKod.Name = "colKod";
             this.colKod.OptionsColumn.AllowEdit = false;
             this.colKod.StatusBarAciklama = null;
@@ -132,12 +148,13 @@
             this.colKod.StatusBarKisaYolAciklama = null;
             this.colKod.Visible = true;
             this.colKod.VisibleIndex = 0;
-            this.colKod.Width = 120;
+            this.colKod.Width = 140;
             // 
             // colIlAdi
             // 
             this.colIlAdi.Caption = "İl Adı";
-            this.colIlAdi.FieldName = "İlAdi";
+            this.colIlAdi.FieldName = "IlAdi";
+            this.colIlAdi.MinWidth = 23;
             this.colIlAdi.Name = "colIlAdi";
             this.colIlAdi.OptionsColumn.AllowEdit = false;
             this.colIlAdi.StatusBarAciklama = null;
@@ -145,12 +162,13 @@
             this.colIlAdi.StatusBarKisaYolAciklama = null;
             this.colIlAdi.Visible = true;
             this.colIlAdi.VisibleIndex = 1;
-            this.colIlAdi.Width = 250;
+            this.colIlAdi.Width = 292;
             // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.MinWidth = 23;
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.StatusBarAciklama = null;
@@ -158,15 +176,16 @@
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 2;
-            this.colAciklama.Width = 450;
+            this.colAciklama.Width = 525;
             // 
             // IlListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 530);
+            this.ClientSize = new System.Drawing.Size(1253, 652);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "IlListForm";
             this.Text = "İl Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
