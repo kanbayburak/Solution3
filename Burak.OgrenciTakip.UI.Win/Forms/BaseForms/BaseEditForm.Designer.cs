@@ -45,6 +45,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -95,7 +101,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(986, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(596, 135);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -203,6 +209,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnFarkliKaydet.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.saveall_32x32;
             this.btnFarkliKaydet.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F2));
             this.btnFarkliKaydet.Name = "btnFarkliKaydet";
+            toolTipTitleItem6.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem6.Text = "(Shift+F2)";
+            toolTipItem6.Text = "Farklı Kaydet.";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnFarkliKaydet.SuperTip = superToolTip6;
             this.btnFarkliKaydet.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // btnUygula
@@ -213,6 +225,11 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             this.btnUygula.ImageOptions.LargeImage = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.insertrangefilter_32x32;
             this.btnUygula.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.btnUygula.Name = "btnUygula";
+            toolTipTitleItem7.ImageOptions.Image = global::Burak.OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem7.Text = "(F8)";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnUygula.SuperTip = superToolTip7;
             this.btnUygula.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // ribbonPage1
@@ -239,11 +256,11 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarAciklama);
             this.ribbonStatusBar1.ItemLinks.Add(this.statusaBarKisaYol);
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarKisaYolAciklama);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 593);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 410);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(986, 30);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(596, 30);
             // 
             // ribbonPage2
             // 
@@ -254,7 +271,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 623);
+            this.ClientSize = new System.Drawing.Size(596, 440);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

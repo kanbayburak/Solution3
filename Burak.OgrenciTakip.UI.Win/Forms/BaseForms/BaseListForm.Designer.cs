@@ -181,7 +181,7 @@
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1122, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(619, 135);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -663,11 +663,11 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barCikis, true);
             this.ribbonStatusBar1.ItemLinks.Add(this.barCikisAciklama);
             this.ribbonStatusBar1.ItemLinks.Add(this.btnAktifPasifKartlar);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 456);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 400);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1122, 30);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(619, 30);
             // 
             // ribbonPage2
             // 
@@ -688,7 +688,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 486);
+            this.ClientSize = new System.Drawing.Size(619, 430);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

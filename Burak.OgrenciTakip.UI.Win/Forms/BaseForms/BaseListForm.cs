@@ -50,9 +50,23 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             Tablo.DoubleClick += Tablo_DoubleClick;
             Tablo.KeyDown += Tablo_KeyDown;
             Tablo.MouseUp += Tablo_MouseUp;
+            Tablo.FilterEditorCreated += Tablo_FilterEditorCreated;
+            Tablo.ColumnFilterChanged += Tablo_ColumnFilterChanged;
 
             //Form Events
             Shown += BaseListForm_Shown;
+        }
+
+        private void Tablo_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Tablo.ActiveFilterString))
+                _filtreId = 0;
+        }
+
+        private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
+        {
+            e.ShowFilterEditor = false;
+            ShowEditForms<FiltreEditForm>.ShowDialogEditForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
         }
 
         private void Tablo_MouseUp(object sender, MouseEventArgs e)
@@ -162,7 +176,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             if (entity == null) return;
 
             _filtreId = entity.Id;
-            Tablo.ActiveFilterString = entity.FiltreAdi;
+            Tablo.ActiveFilterString = entity.FiltreMetni;
         }
         private void Yazdir()
         {

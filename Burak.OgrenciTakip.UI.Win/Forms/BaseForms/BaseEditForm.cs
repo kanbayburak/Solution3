@@ -162,6 +162,11 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Kaydet(false);
             }
+            else if (e.Item == btnFarkliKaydet)
+            {
+                //yetki kontrolü
+                FarkliKaydet();
+            }
 
             else if (e.Item == btnGerial)
             {
@@ -182,6 +187,16 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             Cursor.Current = DefaultCursor;
         }
+
+        private void FarkliKaydet()
+        {
+            if (Messages.EvetSeciliEvetHayir("Bu filtre Referasn alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyor Musunuz?", "Kayıt Onay") != DialogResult.Yes) return;
+            BaseIslemTuru = IslemTuru.EntityInsert;
+            Yukle();
+            if (Kaydet(true))
+                Close();
+        }
+
         protected virtual void SecimYap(object sender) { }
 
         private void EntityDelete()

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltreListForm));
             this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
@@ -51,16 +52,21 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(727, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(1141, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
+            // 
+            // btnGonder
+            // 
+            this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
+            this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
             // 
             // longNavigator
             // 
             this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 372);
+            this.longNavigator.Location = new System.Drawing.Point(0, 481);
             this.longNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(727, 30);
+            this.longNavigator.Size = new System.Drawing.Size(1141, 30);
             this.longNavigator.TabIndex = 2;
             // 
             // grid
@@ -70,7 +76,7 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(727, 237);
+            this.grid.Size = new System.Drawing.Size(1141, 346);
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -157,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 432);
+            this.ClientSize = new System.Drawing.Size(1141, 541);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
