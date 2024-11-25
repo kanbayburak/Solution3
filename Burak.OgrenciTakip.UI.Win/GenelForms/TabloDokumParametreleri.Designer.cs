@@ -110,7 +110,7 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbonControl.Size = new System.Drawing.Size(688, 135);
+            this.ribbonControl.Size = new System.Drawing.Size(697, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl1
@@ -122,7 +122,7 @@
             this.myDataLayoutControl1.Name = "myDataLayoutControl1";
             this.myDataLayoutControl1.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl1.Root = this.Root;
-            this.myDataLayoutControl1.Size = new System.Drawing.Size(688, 274);
+            this.myDataLayoutControl1.Size = new System.Drawing.Size(697, 309);
             this.myDataLayoutControl1.TabIndex = 2;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
@@ -139,11 +139,12 @@
             this.myPictureEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.myPictureEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.myPictureEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.myPictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.myPictureEdit1.Properties.NullText = "Resim Yok";
             this.myPictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.myPictureEdit1.Properties.ShowMenu = false;
             this.myPictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.myPictureEdit1.Size = new System.Drawing.Size(196, 250);
+            this.myPictureEdit1.Size = new System.Drawing.Size(196, 285);
             this.myPictureEdit1.StatusBarAciklama = null;
             this.myPictureEdit1.StatusBarKisaYol = "F4";
             this.myPictureEdit1.StatusBarKisaYolAciklama = null;
@@ -165,7 +166,7 @@
             this.myDataLayoutControl2.Name = "myDataLayoutControl2";
             this.myDataLayoutControl2.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl2.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl2.Size = new System.Drawing.Size(464, 250);
+            this.myDataLayoutControl2.Size = new System.Drawing.Size(473, 285);
             this.myDataLayoutControl2.TabIndex = 4;
             this.myDataLayoutControl2.Text = "myDataLayoutControl2";
             // 
@@ -201,7 +202,7 @@
             this.txtYaziciAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtYaziciAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtYaziciAdi.Size = new System.Drawing.Size(299, 22);
+            this.txtYaziciAdi.Size = new System.Drawing.Size(308, 22);
             this.txtYaziciAdi.StatusBarAciklama = null;
             this.txtYaziciAdi.StatusBarKisaYol = "F4 :";
             this.txtYaziciAdi.StatusBarKisaYolAciklama = null;
@@ -302,7 +303,7 @@
             this.txtRaporBasligi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtRaporBasligi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRaporBasligi.Properties.MaxLength = 50;
-            this.txtRaporBasligi.Size = new System.Drawing.Size(299, 22);
+            this.txtRaporBasligi.Size = new System.Drawing.Size(308, 22);
             this.txtRaporBasligi.StatusBarAciklama = null;
             this.txtRaporBasligi.StyleController = this.myDataLayoutControl2;
             this.txtRaporBasligi.TabIndex = 5;
@@ -318,9 +319,9 @@
             this.txtBaslikEkle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtBaslikEkle.Size = new System.Drawing.Size(65, 22);
-            this.txtBaslikEkle.StatusBarAciklama = null;
+            this.txtBaslikEkle.StatusBarAciklama = "Başlık Eklenecek.";
             this.txtBaslikEkle.StatusBarKisaYol = "F4 :";
-            this.txtBaslikEkle.StatusBarKisaYolAciklama = null;
+            this.txtBaslikEkle.StatusBarKisaYolAciklama = "Seçim Yap.";
             this.txtBaslikEkle.StyleController = this.myDataLayoutControl2;
             this.txtBaslikEkle.TabIndex = 4;
             // 
@@ -384,7 +385,7 @@
             rowDefinition8,
             rowDefinition9,
             rowDefinition10});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(464, 250);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(473, 285);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
@@ -408,7 +409,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem4.Size = new System.Drawing.Size(444, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(453, 24);
             this.layoutControlItem4.Text = "Rapor Başlığı";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(138, 16);
             // 
@@ -486,7 +487,7 @@
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 8;
-            this.layoutControlItem10.Size = new System.Drawing.Size(444, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(453, 24);
             this.layoutControlItem10.Text = "Yazıcı Adı";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(138, 16);
             // 
@@ -499,7 +500,7 @@
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem11.OptionsTableLayoutItem.RowIndex = 9;
-            this.layoutControlItem11.Size = new System.Drawing.Size(210, 28);
+            this.layoutControlItem11.Size = new System.Drawing.Size(210, 63);
             this.layoutControlItem11.Text = "Yazdırılacak Adet";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(138, 16);
             // 
@@ -523,7 +524,7 @@
             rowDefinition11.SizeType = System.Windows.Forms.SizeType.Percent;
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition11});
-            this.Root.Size = new System.Drawing.Size(688, 274);
+            this.Root.Size = new System.Drawing.Size(697, 309);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -534,7 +535,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(200, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem1.Size = new System.Drawing.Size(468, 254);
+            this.layoutControlItem1.Size = new System.Drawing.Size(477, 289);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -545,7 +546,7 @@
             this.layoutControlItem2.Control = this.myPictureEdit1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(200, 254);
+            this.layoutControlItem2.Size = new System.Drawing.Size(200, 289);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -553,7 +554,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 439);
+            this.ClientSize = new System.Drawing.Size(697, 474);
             this.Controls.Add(this.myDataLayoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

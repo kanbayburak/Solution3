@@ -4,6 +4,7 @@ using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.Model.Entities.Base;
 using Burak.OgrenciTakip.UI.Win.Forms.FiltreForms;
 using Burak.OgrenciTakip.UI.Win.Functions;
+using Burak.OgrenciTakip.UI.Win.GenelForms;
 using Burak.OgrenciTakip.UI.Win.Show;
 using Burak.OgrenciTakip.UI.Win.Show.Interfaces;
 using DevExpress.Utils.Extensions;

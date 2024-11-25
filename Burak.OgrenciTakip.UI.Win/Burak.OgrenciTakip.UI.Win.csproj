@@ -157,6 +157,12 @@
     <Compile Include="GenelForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenelForms\RaporOnizleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenelForms\RaporOnizleme.Designer.cs">
+      <DependentUpon>RaporOnizleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenelForms\TabloDokumParametreleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,7 @@
     <Compile Include="Interfaces\IStatusBarKisaYol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Show\ShowRibbonForms.cs" />
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
     <Compile Include="Show\ShowEditForms.cs" />
     <Compile Include="Show\ShowListForms.cs" />
@@ -286,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenelForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenelForms\RaporOnizleme.resx">
+      <DependentUpon>RaporOnizleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenelForms\TabloDokumParametreleri.resx">
       <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>

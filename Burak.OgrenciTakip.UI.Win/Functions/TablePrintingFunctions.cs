@@ -48,7 +48,7 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             switch (_dp.DokumSekli)
             {
                 case DokumSekli.TabloBaskiOnizleme:
-                    ShowRibbonForm<RaporOnizleme>.ShowForm(true, _ps, _dp.RaporBaslik);
+                    ShowRibbonForms<RaporOnizleme>.ShowForm(true, _ps, _dp.RaporBaslik);
                     break;
                 case DokumSekli.TabloYazdir:
                     for (int i = 0; i < _dp.YazdirilacakAdet; i++)
@@ -116,7 +116,7 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             var donemValueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
             {
                 Font = regularFont,
-                Text = $"Dönem: {AnaForm.DonemAdi}"
+                Text = $": {AnaForm.DonemAdi}"
             };
 
             _ps.Graph.DrawBrick(donemValueBrick, new RectangleF(55, 40, 200, 15));

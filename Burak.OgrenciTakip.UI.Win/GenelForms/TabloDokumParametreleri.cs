@@ -79,6 +79,7 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
         }
         protected override void Control_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (sender != txtBaslikEkle) return;
             txtRaporBasligi.Enabled = txtBaslikEkle.Text.GetEnum<EvetHayir>() == EvetHayir.Evet;
         }
     }
