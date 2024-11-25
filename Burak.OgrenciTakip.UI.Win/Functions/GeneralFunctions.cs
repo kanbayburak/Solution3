@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Common.Messages;
@@ -168,5 +171,15 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
             sagMenu.ShowPopup(Control.MousePosition);
         }
 
+        public static List<string> YazicilariListele()  //bilgisara kurulu olan yazıcıları getirir karşımıza
+        {
+            return PrinterSettings.InstalledPrinters.Cast<string>().ToList();
+        }
+
+        public static string DefaultYazici()
+        {
+            var settings = new PrinterSettings();
+            return settings.PrinterName;
+        }
     }
 }

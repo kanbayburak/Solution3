@@ -12,7 +12,7 @@ using System;
 using System.Windows.Forms;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.Utils.Extensions;
-
+using Burak.OgrenciTakip.Model.Entities.Base.Interfaces;
 
 namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 {
@@ -57,6 +57,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                     case FilterControl edt:
                         edt.FilterChanged += Control_EditValueChanged;
                         break;
+                    case ComboBoxEdit edt:
+                        edt.EditValueChanged += Control_EditValueChanged;
+                        edt.SelectedValueChanged += Control_SelectedValueChanged;
+                        break; 
                     case MyButtonEdit edt:
                         edt.IdChanged += Control_IdChanged;
                         edt.EnabledChange += Control_EnabledChange;
@@ -80,6 +84,8 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
                     foreach (Control ctrl in layout.Controls)
                         ControlEvents(ctrl);
         }
+
+        protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 
         private void BasedEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -180,6 +186,12 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             else if (e.Item == btnUygula)
                 FiltreUygula();
 
+            else if (e.Item == btnYazdir)
+                Yazdir();
+
+            else if (e.Item == btnBaskiOnizleme)
+                BaskiOnizleme();
+
             else if (e.Item == btnCikis)
             {
                 Close();
@@ -187,6 +199,10 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
 
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void BaskiOnizleme() { }
+
+        protected virtual void Yazdir() { }
 
         private void FarkliKaydet()
         {
@@ -280,6 +296,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
         }
 
         protected internal virtual void Yukle() {}
+        protected internal virtual IBaseEntity ReturnEntity() { return null; }
         protected virtual void NesneyiKontrollereBagla() { }
         protected virtual void GuncelNesneOlustur() { }
         protected internal virtual void ButonEnabledDurumu()

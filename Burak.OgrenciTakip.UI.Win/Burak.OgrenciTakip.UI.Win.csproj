@@ -156,6 +156,12 @@
     <Compile Include="GenelForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenelForms\TabloDokumParametreleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenelForms\TabloDokumParametreleri.Designer.cs">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IStatusBarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisaYol.cs" />
     <Compile Include="Program.cs" />
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenelForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenelForms\TabloDokumParametreleri.resx">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -534,6 +543,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\insertrangefilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-01-18 at 20.11.27.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-01-18 at 20.11.271.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x323.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
