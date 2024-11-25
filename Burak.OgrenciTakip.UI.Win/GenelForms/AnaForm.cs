@@ -8,6 +8,7 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
 {
     public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
         public AnaForm()
         {
             InitializeComponent();

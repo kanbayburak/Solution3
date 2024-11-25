@@ -12,9 +12,10 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
     public partial class TabloDokumParametreleri : BaseEditForm
     {
         #region Variable
-        private DokumSekli _dokumSekli; 
+        private DokumSekli _dokumSekli;
+        private readonly string _raporBaslik;
         #endregion
-        public TabloDokumParametreleri()
+        public TabloDokumParametreleri(params object[] prm)
         {
             InitializeComponent();
 
@@ -22,10 +23,13 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
             HideItems = new BarItem[] { btnYeni, btnKaydet, btnGerial, btnSil };
             ShowItems = new BarItem[] { btnYazdir, btnBaskiOnizleme };
             EventsLoad();
+
+            _raporBaslik = prm[0].ToString();
         }
 
         protected internal override void Yukle()
         {
+            txtRaporBasligi.Text = _raporBaslik;
             txtBaslikEkle.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
             txtRaporKagidaSigdir.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<RaporuKagidaSigdirmaTuru>());
             txtYazdirmaYonu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaYonu>());

@@ -1,4 +1,5 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
+using Burak.OgrenciTakip.Model.Entities.Base.Interfaces;
 using Burak.OgrenciTakip.UI.Win.Forms.BaseForms;
 using Burak.OgrenciTakip.UI.Win.Show.Interfaces;
 using System;
@@ -39,6 +40,15 @@ namespace Burak.OgrenciTakip.UI.Win.Show
                 frm.Yukle();
                 frm.ShowDialog();
                 return frm.RefresYapilacak ? frm.Id : 0;  //formda değişiklik yapılacaksa true oldu o zaman bu formun id sibni geri gönder, değilse 0 olarak gönder diyor
+            }
+        }
+        public static T ShowDialogEditForm<T>(params object[] prm) where T : IBaseEntity
+        {
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+                frm.Yukle();
+                frm.ShowDialog();
+                return (T)frm.ReturnEntity();
             }
         }
     }

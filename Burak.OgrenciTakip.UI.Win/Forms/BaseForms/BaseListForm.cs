@@ -178,9 +178,9 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             _filtreId = entity.Id;
             Tablo.ActiveFilterString = entity.FiltreMetni;
         }
-        private void Yazdir()
+        protected virtual void Yazdir()
         {
-            throw new NotImplementedException();
+            TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
         }
         private void FormCaptionAyarla()
         {
