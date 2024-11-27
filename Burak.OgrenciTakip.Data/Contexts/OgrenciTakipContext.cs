@@ -33,5 +33,6 @@ namespace Burak.OgrenciTakip.Data.Contexts
         public DbSet<Ilce> Ilce { get; set; }
         public DbSet<Okul> Okul { get; set; }
         public DbSet<Filtre> Filtre { get; set; }
+        public DbSet<AileBilgi> AileBilgi { get; set; }
     }
 }
