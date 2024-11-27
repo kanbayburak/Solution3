@@ -32,7 +32,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.IlForms
         {
             Tablo.GridControl.DataSource = ((IlBll)Bll).List(FilterFunctions.Filter<Il>(AktifKartlariGoster));
         }
-        protected override void BagliKartAC()
+        protected override void BagliKartAc()
         {
             var Entity = Tablo.GetRow<Il>();
             if (Entity == null) return;
