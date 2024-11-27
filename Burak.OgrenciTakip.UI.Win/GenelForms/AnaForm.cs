@@ -3,6 +3,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
+using Burak.OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using Burak.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
 
@@ -44,6 +45,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<AileBilgiListForm>.ShowListForm(KartTuru.AileBilgi);
             else if (e.Item == btnIptalNedeniKartlari)
                 ShowListForms<IptalNedeniListForm>.ShowListForm(KartTuru.IptalNedeni);
+            else if (e.Item == btnYabanciDilKartlari)
+                ShowListForms<YabanciDilListForm>.ShowListForm(KartTuru.YabanciDil);
         }
     }
 }
