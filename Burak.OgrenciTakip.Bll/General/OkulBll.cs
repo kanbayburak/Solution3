@@ -1,7 +1,6 @@
 ﻿using Burak.OgrenciTakip.Bll.Base;
 using Burak.OgrenciTakip.Bll.Interfaces;
 using Burak.OgrenciTakip.Common.Enums;
-using Burak.OgrenciTakip.Data.Contexts;
 using Burak.OgrenciTakip.Model.Dto;
 using Burak.OgrenciTakip.Model.Entities;
 using Burak.OgrenciTakip.Model.Entities.Base;
@@ -13,16 +12,16 @@ using System.Windows.Forms;
 
 namespace Burak.OgrenciTakip.Bll.General
 {
-    public class OkulBll: BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
+    public class OkulBll: BaseGenelBll<Okul>, IBaseGenelBll, IBaseCommonBll
     {
-        public OkulBll() { }
+        public OkulBll() : base(KartTuru.Okul) { }
 
-        public OkulBll(Control ctrl) : base(ctrl) { }
+        public OkulBll(Control ctrl) : base(ctrl, KartTuru.Okul) { }
 
 
-        public BaseEntity Single(Expression<Func<Okul, bool>> filter)
+        public override BaseEntity Single(Expression<Func<Okul, bool>> filter)
         {
-            return BaseSingle(filter, x => new OkulS
+            return BaseSingle(filter, x => new OkulS   //OkulS diye bir tane datatransferobject oluşuturarak kendisine has bir select işlemi yaptık
             {
                 Id = x.Id,  //x yukarda yazdığımız okulu temsil ediyor
                 Kod = x.Kod,
@@ -36,9 +35,9 @@ namespace Burak.OgrenciTakip.Bll.General
             });
         }
 
-        public IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
+        public override IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
         {
-            return BaseList(filter, x => new OkulL
+            return BaseList(filter, x => new OkulL //OkulL diye bir tane datatransferobject oluşuturarak kendisine has bir select işlemi yaptık
             {
                 Id = x.Id,
                 Kod = x.Kod,
@@ -47,29 +46,7 @@ namespace Burak.OgrenciTakip.Bll.General
                 IlceAdi = x.Ilce.IlceAdi,
                 Aciklama = x.Aciklama,
 
-            }).OrderBy(x => x.Kod).ToList(); 
+            }).OrderBy(x => x.Kod).ToList();
         }
-
-       public bool Insert(BaseEntity entity)
-        {
-            return BaseInsert(entity, x => x.Kod == entity.Kod);
-        }
-
-        public bool UpDate(BaseEntity oldEntity, BaseEntity currentEntity)
-        {
-            return BaseUpdate(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod);
-        }
-
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity,KartTuru.Okul);
-        }
-
-        public string YeniKodVer()
-        {
-            return BaseYeniKodVer(KartTuru.Okul, x => x.Kod);
-        }
-
-
     }
 }
