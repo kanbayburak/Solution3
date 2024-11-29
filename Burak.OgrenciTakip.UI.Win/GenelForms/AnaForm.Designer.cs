@@ -46,12 +46,13 @@
             this.btnGorevKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnIndirimTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnEvrakKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPromosyonKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnServisYeriKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnPromosyonKartlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -78,10 +79,11 @@
             this.btnGorevKartlari,
             this.btnIndirimTuruKartlari,
             this.btnEvrakKartlari,
-            this.btnPromosyonKartlari});
+            this.btnPromosyonKartlari,
+            this.btnServisYeriKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 19;
+            this.ribbonControl.MaxItemId = 20;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.OptionsMenuMinWidth = 385;
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -185,6 +187,18 @@
             this.btnEvrakKartlari.Id = 17;
             this.btnEvrakKartlari.Name = "btnEvrakKartlari";
             // 
+            // btnPromosyonKartlari
+            // 
+            this.btnPromosyonKartlari.Caption = "Promosyon Kartları";
+            this.btnPromosyonKartlari.Id = 18;
+            this.btnPromosyonKartlari.Name = "btnPromosyonKartlari";
+            // 
+            // btnServisYeriKartlari
+            // 
+            this.btnServisYeriKartlari.Caption = "Servis Kartları";
+            this.btnServisYeriKartlari.Id = 19;
+            this.btnServisYeriKartlari.Name = "btnServisYeriKartlari";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -210,6 +224,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnIndirimTuruKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnEvrakKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnPromosyonKartlari);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnServisYeriKartlari);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -229,12 +244,6 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnPromosyonKartlari
-            // 
-            this.btnPromosyonKartlari.Caption = "Promosyon Kartları";
-            this.btnPromosyonKartlari.Id = 18;
-            this.btnPromosyonKartlari.Name = "btnPromosyonKartlari";
-            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -249,6 +258,7 @@
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "AnaForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.AnaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
             this.ResumeLayout(false);
@@ -281,5 +291,6 @@
         private DevExpress.XtraBars.BarButtonItem btnIndirimTuruKartlari;
         private DevExpress.XtraBars.BarButtonItem btnEvrakKartlari;
         private DevExpress.XtraBars.BarButtonItem btnPromosyonKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnServisYeriKartlari;
     }
 }
