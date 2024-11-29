@@ -1,5 +1,6 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using Burak.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using Burak.OgrenciTakip.UI.Win.Forms.GorevForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
@@ -20,7 +21,9 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
 {
     public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static long DonemId = 1;
         public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
+        public static long SubeId = 1;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
         public AnaForm()
         {
@@ -74,6 +77,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<GorevListForm>.ShowListForm(KartTuru.Gorev);
             else if (e.Item == btnIndirimTuruKartlari)
                 ShowListForms<IndirimTuruListForm>.ShowListForm(KartTuru.IndirimTuru);
+            else if (e.Item == btnEvrakKartlari)
+                ShowListForms<EvrakListForm>.ShowListForm(KartTuru.Evrak);
         }
     }
 }
