@@ -65,6 +65,7 @@
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\OkulBll.cs" />
+    <Compile Include="General\RehberBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabnciDilBll.cs" />
     <Compile Include="Interfaces\IBaseBll.cs" />

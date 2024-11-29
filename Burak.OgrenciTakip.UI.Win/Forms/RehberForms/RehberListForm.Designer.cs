@@ -1,6 +1,6 @@
-﻿namespace Burak.OgrenciTakip.UI.Win.Forms.KontenjanForms
+﻿namespace Burak.OgrenciTakip.UI.Win.Forms.RehberForms
 {
-    partial class KontenjanListForm
+    partial class RehberListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KontenjanListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RehberListForm));
+            this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colKontenjanAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colAdiSoyadi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colTelefon1 = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colTelefon2 = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -51,12 +53,22 @@
             this.ribbonControl.SearchEditItem.EditWidth = 150;
             this.ribbonControl.SearchEditItem.Id = -5000;
             this.ribbonControl.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl.Size = new System.Drawing.Size(998, 135);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
             // 
             this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
             this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 439);
+            this.longNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(998, 30);
+            this.longNavigator.TabIndex = 2;
             // 
             // grid
             // 
@@ -65,8 +77,8 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(619, 235);
-            this.grid.TabIndex = 2;
+            this.grid.Size = new System.Drawing.Size(998, 304);
+            this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
             // 
@@ -85,7 +97,9 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colKod,
-            this.colKontenjanAdi,
+            this.colAdiSoyadi,
+            this.colTelefon1,
+            this.colTelefon2,
             this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
@@ -134,19 +148,51 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 120;
             // 
-            // colKontenjanAdi
+            // colAdiSoyadi
             // 
-            this.colKontenjanAdi.Caption = "Kontenjan Adı";
-            this.colKontenjanAdi.FieldName = "KontenjanAdi";
-            this.colKontenjanAdi.MinWidth = 25;
-            this.colKontenjanAdi.Name = "colKontenjanAdi";
-            this.colKontenjanAdi.OptionsColumn.AllowEdit = false;
-            this.colKontenjanAdi.StatusBarAciklama = null;
-            this.colKontenjanAdi.StatusBarKisaYol = "F4 :";
-            this.colKontenjanAdi.StatusBarKisaYolAciklama = null;
-            this.colKontenjanAdi.Visible = true;
-            this.colKontenjanAdi.VisibleIndex = 1;
-            this.colKontenjanAdi.Width = 250;
+            this.colAdiSoyadi.Caption = "Ad Soyad";
+            this.colAdiSoyadi.FieldName = "AdiSoyadi";
+            this.colAdiSoyadi.MinWidth = 25;
+            this.colAdiSoyadi.Name = "colAdiSoyadi";
+            this.colAdiSoyadi.OptionsColumn.AllowEdit = false;
+            this.colAdiSoyadi.StatusBarAciklama = null;
+            this.colAdiSoyadi.StatusBarKisaYol = "F4 :";
+            this.colAdiSoyadi.StatusBarKisaYolAciklama = null;
+            this.colAdiSoyadi.Visible = true;
+            this.colAdiSoyadi.VisibleIndex = 1;
+            this.colAdiSoyadi.Width = 200;
+            // 
+            // colTelefon1
+            // 
+            this.colTelefon1.AppearanceCell.Options.UseTextOptions = true;
+            this.colTelefon1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTelefon1.Caption = "Telefon-1";
+            this.colTelefon1.FieldName = "Telefon1";
+            this.colTelefon1.MinWidth = 25;
+            this.colTelefon1.Name = "colTelefon1";
+            this.colTelefon1.OptionsColumn.AllowEdit = false;
+            this.colTelefon1.StatusBarAciklama = null;
+            this.colTelefon1.StatusBarKisaYol = "F4 :";
+            this.colTelefon1.StatusBarKisaYolAciklama = null;
+            this.colTelefon1.Visible = true;
+            this.colTelefon1.VisibleIndex = 2;
+            this.colTelefon1.Width = 125;
+            // 
+            // colTelefon2
+            // 
+            this.colTelefon2.AppearanceCell.Options.UseTextOptions = true;
+            this.colTelefon2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTelefon2.Caption = "Telefon-2";
+            this.colTelefon2.FieldName = "Telefon2";
+            this.colTelefon2.MinWidth = 25;
+            this.colTelefon2.Name = "colTelefon2";
+            this.colTelefon2.OptionsColumn.AllowEdit = false;
+            this.colTelefon2.StatusBarAciklama = null;
+            this.colTelefon2.StatusBarKisaYol = "F4 :";
+            this.colTelefon2.StatusBarKisaYolAciklama = null;
+            this.colTelefon2.Visible = true;
+            this.colTelefon2.VisibleIndex = 3;
+            this.colTelefon2.Width = 125;
             // 
             // colAciklama
             // 
@@ -159,27 +205,19 @@
             this.colAciklama.StatusBarKisaYol = "F4 :";
             this.colAciklama.StatusBarKisaYolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 2;
-            this.colAciklama.Width = 450;
+            this.colAciklama.VisibleIndex = 4;
+            this.colAciklama.Width = 400;
             // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 370);
-            this.longNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(619, 30);
-            this.longNavigator.TabIndex = 3;
-            // 
-            // KontenjanListForm
+            // RehberListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 430);
+            this.ClientSize = new System.Drawing.Size(998, 499);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
-            this.Name = "KontenjanListForm";
-            this.Text = "Kontenjan Kartları";
+            this.MinimumSize = new System.Drawing.Size(1000, 500);
+            this.Name = "RehberListForm";
+            this.Text = "Rehber Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
@@ -193,12 +231,14 @@
 
         #endregion
 
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;
         private UserControls.Grid.MyGridColumn colKod;
-        private UserControls.Navigators.LongNavigator longNavigator;
-        private UserControls.Grid.MyGridColumn colKontenjanAdi;
+        private UserControls.Grid.MyGridColumn colAdiSoyadi;
+        private UserControls.Grid.MyGridColumn colTelefon1;
+        private UserControls.Grid.MyGridColumn colTelefon2;
         private UserControls.Grid.MyGridColumn colAciklama;
     }
 }

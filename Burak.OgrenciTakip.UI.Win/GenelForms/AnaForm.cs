@@ -4,6 +4,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using Burak.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
+using Burak.OgrenciTakip.UI.Win.Forms.RehberForms;
 using Burak.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using Burak.OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using Burak.OgrenciTakip.UI.Win.Show;
@@ -53,6 +54,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<TesvikListForm>.ShowListForm(KartTuru.Tesvik);
             else if (e.Item == btnKontenjanKartlari)
                 ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);
+            else if (e.Item == btnRehberKartlari)
+                ShowListForms<RehberListForm>.ShowListForm(KartTuru.Rehber);
         }
     }
 }
