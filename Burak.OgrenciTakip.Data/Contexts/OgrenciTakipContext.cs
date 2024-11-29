@@ -27,7 +27,7 @@ namespace Burak.OgrenciTakip.Data.Contexts
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>(); 
         }
 
-        //oluþturduðumuz her entity i burada tanýmlayacaðýz
+        //oluþturduðumuz her entity i burada tanýmlayacaðýz çünkü database de generate iþlemi gerçekleþtirmek için 
         //database lerdeki gibi table olarak farz edebiliriz 
         public DbSet<Il> Il { get; set; }
         public DbSet<Ilce> Ilce { get; set; }
@@ -42,5 +42,6 @@ namespace Burak.OgrenciTakip.Data.Contexts
         public DbSet<SinifGrup> SinifGrup { get; set; }
         public DbSet<Meslek> Meslek { get; set; }
         public DbSet<Yakinlik> Yakinlik { get; set; }
+        public DbSet<Isyeri> Isyeri { get; set; }
     }
 }
