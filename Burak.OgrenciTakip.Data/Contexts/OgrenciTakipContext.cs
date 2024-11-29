@@ -48,5 +48,6 @@ namespace Burak.OgrenciTakip.Data.Contexts
         public DbSet<Evrak> Evrak { get; set; }
         public DbSet<Sube> Sube { get; set; }
         public DbSet<Donem> Donem { get; set; }
+        public DbSet<Promosyon> Promosyon { get; set; }
     }
 }

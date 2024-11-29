@@ -9,6 +9,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using Burak.OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using Burak.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
+using Burak.OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using Burak.OgrenciTakip.UI.Win.Forms.RehberForms;
 using Burak.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using Burak.OgrenciTakip.UI.Win.Forms.TesvikForms;
@@ -79,6 +80,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<IndirimTuruListForm>.ShowListForm(KartTuru.IndirimTuru);
             else if (e.Item == btnEvrakKartlari)
                 ShowListForms<EvrakListForm>.ShowListForm(KartTuru.Evrak);
+            else if (e.Item == btnPromosyonKartlari)
+                ShowListForms<PromosyonListForm>.ShowListForm(KartTuru.Promosyon);
         }
     }
 }
