@@ -3,6 +3,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IptalNedeniForms;
 using Burak.OgrenciTakip.UI.Win.Forms.KontenjanForms;
+using Burak.OgrenciTakip.UI.Win.Forms.MeslekForms;
 using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
 using Burak.OgrenciTakip.UI.Win.Forms.RehberForms;
 using Burak.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
@@ -59,6 +60,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<RehberListForm>.ShowListForm(KartTuru.Rehber);
             else if (e.Item == btnSinifGrupKartlari)
                 ShowListForms<SinifGrupListForm>.ShowListForm(KartTuru.SinifGrup);
+            else if (e.Item == btnMeslekKartlari)
+                ShowListForms<MeslekListForm>.ShowListForm(KartTuru.Meslek);
         }
     }
 }
