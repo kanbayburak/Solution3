@@ -12,6 +12,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.OkulForms;
 using Burak.OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using Burak.OgrenciTakip.UI.Win.Forms.RehberForms;
 using Burak.OgrenciTakip.UI.Win.Forms.ServisForms;
+using Burak.OgrenciTakip.UI.Win.Forms.SinifForms;
 using Burak.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
 using Burak.OgrenciTakip.UI.Win.Forms.TesvikForms;
 using Burak.OgrenciTakip.UI.Win.Forms.YabanciDilForms;
@@ -85,6 +86,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<PromosyonListForm>.ShowListForm(KartTuru.Promosyon);
             else if (e.Item == btnServisYeriKartlari)
                 ShowListForms<ServisListForm>.ShowListForm(KartTuru.Servis);
+            else if (e.Item == btnSinifKartlari)
+                ShowListForms<SinifListForm>.ShowListForm(KartTuru.Sinif);
         }
 
         private void AnaForm_Load(object sender, System.EventArgs e)
