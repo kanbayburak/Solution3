@@ -61,6 +61,7 @@
     <Compile Include="General\AileBilgiBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\GorevBll.cs" />
+    <Compile Include="General\HizmetTuruBll.cs" />
     <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
