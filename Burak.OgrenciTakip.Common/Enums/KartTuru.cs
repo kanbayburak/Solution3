@@ -48,5 +48,7 @@ namespace Burak.OgrenciTakip.Common.Enums
         HizmetTuru = 21,
         [Description("Hizmet Kartı")]
         Hizmet = 22,
+        [Description("Özel Kod Kartı")]
+        OzelKod = 23,
     }
 }
