@@ -1,5 +1,6 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.Model.Entities;
+using Burak.OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlceForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.SinifGrupForms;
@@ -69,6 +70,16 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.GrupAdi;
+                        }
+                    }
+                    break;
+                case "txtHizmetTuru":
+                    {
+                        var entity = (HizmetTuru)ShowListForms<HizmetTuruListForm>.ShowDialogListForm(_kartTuru, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.HizmetTuruAdi;
                         }
                     }
                     break;

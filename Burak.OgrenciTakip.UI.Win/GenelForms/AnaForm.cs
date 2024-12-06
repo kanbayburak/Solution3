@@ -2,6 +2,7 @@
 using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using Burak.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using Burak.OgrenciTakip.UI.Win.Forms.GorevForms;
+using Burak.OgrenciTakip.UI.Win.Forms.HizmetForms;
 using Burak.OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
@@ -20,6 +21,7 @@ using Burak.OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using Burak.OgrenciTakip.UI.Win.Forms.YakinlikForm;
 using Burak.OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
+using System;
 
 namespace Burak.OgrenciTakip.UI.Win.GenelForms
 {
@@ -29,6 +31,11 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
         public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
         public static long SubeId = 1;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
+
+        public static DateTime EgitimBaslamaTarihi = new DateTime(2020, 09, 15);
+        public static DateTime DonemBitisTarihi = new DateTime(2021, 06, 30);
+        public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
+        public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
         public AnaForm()
         {
             InitializeComponent();
@@ -91,6 +98,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<SinifListForm>.ShowListForm(KartTuru.Sinif);
             else if (e.Item == btnHizmetTuruKartlari)
                 ShowListForms<HizmetTuruListForm>.ShowListForm(KartTuru.HizmetTuru);
+            else if (e.Item == btnHizmetKartlari)
+                ShowListForms<HizmetListForm>.ShowListForm(KartTuru.Hizmet);
         }
 
         private void AnaForm_Load(object sender, System.EventArgs e)

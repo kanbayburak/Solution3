@@ -208,7 +208,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.BaseForms
             throw new NotImplementedException();
         }
         protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
-        private void Control_EditValueChanged(object sender, EventArgs e)
+        protected virtual void Control_EditValueChanged(object sender, EventArgs e)
         {
             if (!IsLoaded) return;
             GuncelNesneOlustur();
