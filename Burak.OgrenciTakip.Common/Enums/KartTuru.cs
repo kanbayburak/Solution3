@@ -52,5 +52,7 @@ namespace Burak.OgrenciTakip.Common.Enums
         OzelKod = 23,
         [Description("Kasa Kartı")]
         Kasa = 24,
+        [Description("Banka Kartı")]
+        Banka = 25,
     }
 }

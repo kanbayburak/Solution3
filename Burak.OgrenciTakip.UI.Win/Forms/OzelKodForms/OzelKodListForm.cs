@@ -34,7 +34,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.OzelKodForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((OzelKodBll)Bll).List(x => x.KartTuru == _ozelKodKartTuru && x.KartTuru == _ozelKodKartTuru);
+            Tablo.GridControl.DataSource = ((OzelKodBll)Bll).List(x => x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
         }
         protected override void ShowEditForm(long id)
         {
