@@ -38,7 +38,7 @@ namespace Burak.OgrenciTakip.UI.Win.Forms.OzelKodForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = ShowEditForms<OzelKodEditForm>.ShowDialogEditForm(KartTuru.OzelKod, id, _ozelKodTuru, _ozelKodTuru);
+            var result = ShowEditForms<OzelKodEditForm>.ShowDialogEditForm(KartTuru.OzelKod, id, _ozelKodTuru, _ozelKodKartTuru);
             ShowEditFormDefault(result);
         }
     }

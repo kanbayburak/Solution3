@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OzelKodListForm));
             this.longNavigator = new Burak.OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
-            this.myGridControl = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
+            this.grid = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colOzelKodAdi = new Burak.OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,16 +67,16 @@
             this.longNavigator.Size = new System.Drawing.Size(948, 30);
             this.longNavigator.TabIndex = 2;
             // 
-            // myGridControl
+            // grid
             // 
-            this.myGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myGridControl.Location = new System.Drawing.Point(0, 135);
-            this.myGridControl.MainView = this.tablo;
-            this.myGridControl.MenuManager = this.ribbonControl;
-            this.myGridControl.Name = "myGridControl";
-            this.myGridControl.Size = new System.Drawing.Size(948, 328);
-            this.myGridControl.TabIndex = 3;
-            this.myGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid.Location = new System.Drawing.Point(0, 135);
+            this.grid.MainView = this.tablo;
+            this.grid.MenuManager = this.ribbonControl;
+            this.grid.Name = "grid";
+            this.grid.Size = new System.Drawing.Size(948, 328);
+            this.grid.TabIndex = 3;
+            this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
             // 
             // tablo
@@ -95,7 +95,7 @@
             this.colId,
             this.colKod,
             this.colOzelKodAdi});
-            this.tablo.GridControl = this.myGridControl;
+            this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
             this.tablo.OptionsMenu.EnableFooterMenu = false;
@@ -145,7 +145,7 @@
             // 
             // colOzelKodAdi
             // 
-            this.colOzelKodAdi.Caption = "Özel Kod Adi";
+            this.colOzelKodAdi.Caption = "Özel Kod Adı";
             this.colOzelKodAdi.FieldName = "OzelKodAdi";
             this.colOzelKodAdi.MinWidth = 25;
             this.colOzelKodAdi.Name = "colOzelKodAdi";
@@ -162,15 +162,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 523);
-            this.Controls.Add(this.myGridControl);
+            this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.Name = "OzelKodListForm";
             this.Text = "Özel Kod Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
-            this.Controls.SetChildIndex(this.myGridControl, 0);
+            this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,7 +180,7 @@
         #endregion
 
         private UserControls.Navigators.LongNavigator longNavigator;
-        private UserControls.Grid.MyGridControl myGridControl;
+        private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;
         private UserControls.Grid.MyGridColumn colKod;

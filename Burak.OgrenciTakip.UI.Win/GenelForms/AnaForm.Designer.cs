@@ -50,12 +50,13 @@
             this.btnServisYeriKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnSinifKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnHizmetTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHizmetKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnHizmetKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKasaKartlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -86,10 +87,11 @@
             this.btnServisYeriKartlari,
             this.btnSinifKartlari,
             this.btnHizmetTuruKartlari,
-            this.btnHizmetKartlari});
+            this.btnHizmetKartlari,
+            this.btnKasaKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 23;
+            this.ribbonControl.MaxItemId = 24;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.OptionsMenuMinWidth = 385;
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -218,6 +220,12 @@
             this.btnHizmetTuruKartlari.Id = 21;
             this.btnHizmetTuruKartlari.Name = "btnHizmetTuruKartlari";
             // 
+            // btnHizmetKartlari
+            // 
+            this.btnHizmetKartlari.Caption = "Hizmet Kartları";
+            this.btnHizmetKartlari.Id = 22;
+            this.btnHizmetKartlari.Name = "btnHizmetKartlari";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -247,6 +255,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetTuruKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetKartlari);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaKartlari);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -266,11 +275,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnHizmetKartlari
+            // btnKasaKartlari
             // 
-            this.btnHizmetKartlari.Caption = "Hizmet Kartları";
-            this.btnHizmetKartlari.Id = 22;
-            this.btnHizmetKartlari.Name = "btnHizmetKartlari";
+            this.btnKasaKartlari.Caption = "Kasa Kartları";
+            this.btnKasaKartlari.Id = 23;
+            this.btnKasaKartlari.Name = "btnKasaKartlari";
             // 
             // AnaForm
             // 
@@ -284,7 +293,7 @@
             this.Name = "AnaForm";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar1;
-            this.Text = "AnaForm";
+            this.Text = "Ana Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AnaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -323,5 +332,6 @@
         private DevExpress.XtraBars.BarButtonItem btnSinifKartlari;
         private DevExpress.XtraBars.BarButtonItem btnHizmetTuruKartlari;
         private DevExpress.XtraBars.BarButtonItem btnHizmetKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnKasaKartlari;
     }
 }
