@@ -56,5 +56,6 @@ namespace Burak.OgrenciTakip.Data.Contexts
         public DbSet<OzelKod> OzelKod { get; set; }
         public DbSet<Kasa> Kasa { get; set; }
         public DbSet<Banka> Banka { get; set; }
+        public DbSet<BankaSube> BankaSube { get; set; }
     }
 }
