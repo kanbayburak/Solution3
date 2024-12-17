@@ -60,5 +60,7 @@ namespace Burak.OgrenciTakip.Common.Enums
         Avukat = 27,
         [Description("Cari Kartı")]
         Cari = 28,
+        [Description("Ödeme Türü Kartı")]
+        OdemeTuru = 29,
     }
 }
