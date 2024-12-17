@@ -1,5 +1,6 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
 using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
+using Burak.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using Burak.OgrenciTakip.UI.Win.Forms.BankaForms;
 using Burak.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using Burak.OgrenciTakip.UI.Win.Forms.GorevForms;
@@ -106,6 +107,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<KasaListForm>.ShowListForm(KartTuru.Kasa);
             else if (e.Item == btnBankaKartlari)
                 ShowListForms<BankaListForm>.ShowListForm(KartTuru.Banka);
+            else if (e.Item == btnAvukatKartlari)
+                ShowListForms<AvukatListForm>.ShowListForm(KartTuru.Avukat);
         }
 
         private void AnaForm_Load(object sender, System.EventArgs e)
