@@ -55,12 +55,13 @@
             this.btnBankaKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnAvukatKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnCariKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOdemeTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnOdemeTuruKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankaHesapKartlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -96,15 +97,16 @@
             this.btnBankaKartlari,
             this.btnAvukatKartlari,
             this.btnCariKartlari,
-            this.btnOdemeTuruKartlari});
+            this.btnOdemeTuruKartlari,
+            this.btnBankaHesapKartlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 29;
+            this.ribbonControl.MaxItemId = 30;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.OptionsMenuMinWidth = 385;
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl.Size = new System.Drawing.Size(1115, 193);
+            this.ribbonControl.Size = new System.Drawing.Size(1245, 193);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             // 
             // btnOkulKartlari
@@ -258,6 +260,12 @@
             this.btnCariKartlari.Id = 27;
             this.btnCariKartlari.Name = "btnCariKartlari";
             // 
+            // btnOdemeTuruKartlari
+            // 
+            this.btnOdemeTuruKartlari.Caption = "Ödeme Türü Kartları";
+            this.btnOdemeTuruKartlari.Id = 28;
+            this.btnOdemeTuruKartlari.Name = "btnOdemeTuruKartlari";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -292,6 +300,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAvukatKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCariKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnOdemeTuruKartlari);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBankaHesapKartlari);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -300,7 +309,7 @@
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1115, 30);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1245, 30);
             // 
             // ribbonPage2
             // 
@@ -311,17 +320,17 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnOdemeTuruKartlari
+            // btnBankaHesapKartlari
             // 
-            this.btnOdemeTuruKartlari.Caption = "Ödeme Türü Kartları";
-            this.btnOdemeTuruKartlari.Id = 28;
-            this.btnOdemeTuruKartlari.Name = "btnOdemeTuruKartlari";
+            this.btnBankaHesapKartlari.Caption = "Banka Hesap Kartları";
+            this.btnBankaHesapKartlari.Id = 29;
+            this.btnBankaHesapKartlari.Name = "btnBankaHesapKartlari";
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 479);
+            this.ClientSize = new System.Drawing.Size(1245, 479);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.IsMdiContainer = true;
@@ -373,5 +382,6 @@
         private DevExpress.XtraBars.BarButtonItem btnAvukatKartlari;
         private DevExpress.XtraBars.BarButtonItem btnCariKartlari;
         private DevExpress.XtraBars.BarButtonItem btnOdemeTuruKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnBankaHesapKartlari;
     }
 }

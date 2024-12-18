@@ -1,5 +1,8 @@
 ﻿using Burak.OgrenciTakip.Common.Enums;
+using Burak.OgrenciTakip.Model.Dto;
 using Burak.OgrenciTakip.Model.Entities;
+using Burak.OgrenciTakip.UI.Win.Forms.BankaForms;
+using Burak.OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using Burak.OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlceForms;
 using Burak.OgrenciTakip.UI.Win.Forms.IlForms;
@@ -137,6 +140,27 @@ namespace Burak.OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.OzelKodAdi;
+                        }
+                    }
+                    break;
+                case "txtBanka":
+                    {
+                        var entity = (BankaL)ShowListForms<BankaListForm>.ShowDialogListForm(KartTuru.Banka, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.BankaAdi;
+                        }
+                    }
+                    break;
+
+                case "txtBankaSube":
+                    {
+                        var entity = (BankaSube)ShowListForms<BankaSubeListForm>.ShowDialogListForm(KartTuru.BankaSube, _btnEdit.Id, _prmEdit.Id, _prmEdit.Text);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.SubeAdi;
                         }
                     }
                     break;

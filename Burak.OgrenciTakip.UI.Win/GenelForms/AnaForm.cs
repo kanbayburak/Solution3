@@ -2,6 +2,7 @@
 using Burak.OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using Burak.OgrenciTakip.UI.Win.Forms.AvukatForms;
 using Burak.OgrenciTakip.UI.Win.Forms.BankaForms;
+using Burak.OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using Burak.OgrenciTakip.UI.Win.Forms.CariForms;
 using Burak.OgrenciTakip.UI.Win.Forms.EvrakForms;
 using Burak.OgrenciTakip.UI.Win.Forms.GorevForms;
@@ -115,6 +116,8 @@ namespace Burak.OgrenciTakip.UI.Win.GenelForms
                 ShowListForms<CariListForm>.ShowListForm(KartTuru.Cari);
             else if (e.Item == btnOdemeTuruKartlari)
                 ShowListForms<OdemeTuruListForm>.ShowListForm(KartTuru.OdemeTuru);
+            else if (e.Item == btnBankaHesapKartlari)
+                ShowListForms<BankaHesapListForm>.ShowListForm(KartTuru.BankaHesap);
         }
 
         private void AnaForm_Load(object sender, System.EventArgs e)
